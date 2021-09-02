@@ -204,7 +204,7 @@ class crack:
 		elif(yt in ("t","T")):
 			self.menu()
 				
-	def banner(self):
+	def menu(self):
 		wok=[]
 		os.system('clear')
 		ha=0
