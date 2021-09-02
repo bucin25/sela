@@ -205,7 +205,7 @@ class crack:
 			self.menu()
 			
 	def jalan(z):
-	for e in z + '\n':
+	for e in z :
 		sys.stdout.write(e)
 		sys.stdout.flush()
 		time.sleep(0.01)
