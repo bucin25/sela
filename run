@@ -232,7 +232,7 @@ class crack:
 		print('')
 		print('')
 		self.jalan(f"[!] Welcome To RATU ERROR\n")
-		print('[1] Crack Daftar Teman/Publik\n[2] Crack Daftar Followers\n[3] Cek Hasil Crack\n[S] Setting Useragent\n[L] Logout Script\n[R] Laporkan Bug Or Error')
+		print('[01] Crack Daftar Teman/Publik\n[02] Crack Daftar Followers\n[03] Cek Hasil Crack\n[04] Setting Useragent\n[05] Logout Script\n[06] Laporkan Bug Or Error')
 		print(f'+'+'-'*45+'+\n')
 		pil=input('[+] Select: ')
 		if(pil in ('01','1')):
@@ -298,7 +298,7 @@ class crack:
 					nama=x['name'].rsplit(' ')[0]
 					id.append(idnya+'|'+nama)
 			self.kirim()
-		elif(pil in ("c","C")):
+		elif(pil in ("c","3")):
 			print("\n\nPilih Cek Hasil Crack\n[1]. Hasil Ok\n[2]. Hasil Cp\n[3]. Kembali Ke Menu\n")
 			hh=input("[!] Select: ")
 			if(hh in ("01","1")):
@@ -319,12 +319,12 @@ class crack:
 					self.menu()
 			elif(hh in ("03","3")):
 				self.menu()
-		elif(pil in ("s","S")):
+		elif(pil in ("s","4")):
 			self.useragent()
-		elif(pil in ('l','L')):
+		elif(pil in ('l','5')):
 			os.system('rm -rf save')
 			exit('\nBerhasil Logout Dan Hapus Akun')
-		elif(pil in ("r","R")):
+		elif(pil in ("r","6")):
 			print("\n[√] Menuju WhatsApp Author....\n[!] Klik Buka Dengan WhatsApp")
 			os.system("xdg-open https://wa.me/6283870396203")
 
