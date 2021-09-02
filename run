@@ -208,6 +208,7 @@ class crack:
 		wok=[]
 		os.system('clear')
 		ha=0
+		time.sleep(0.01)
 		print('')
 		print('')
 		self.jalan("\033[1;37m                    ______---_____ ")
