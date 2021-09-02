@@ -238,7 +238,7 @@ class crack:
 				jumlah=int(input("\n[!] Target maximal 10 Target\n[?] Masukan Jumlah Target: "))
 				if(jumlah>=11):
 					print("\n[!] Target terlalu banyak maximal target 10")
-					time.sleep(2)
+					time.sleep(0.01)
 					self.menu()
 				else:pass
 			except:jumlah=1
