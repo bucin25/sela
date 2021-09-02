@@ -217,7 +217,6 @@ self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
 self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
 self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
 self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
-.jalan(f"[!] Welcomselfe {self.nama} Selamat Menggunakan\n")
 
 \033[1;37m                    ______---_____ 
 \033[1;37m         ___-----           __      ----_ 
