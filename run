@@ -209,8 +209,10 @@ class crack:
 		os.system('clear')
 		ha=0
 		time.sleep(0.01)
+	def logo(self):	
 		print('')
 		print('')
+		time.sleep(0.01)
 		self.jalan("\033[1;37m                    ______---_____ ")
 		self.jalan("\033[1;37m         ___-----           __      ---- ")
 		self.jalan("\033[1;37m ___---             ___------             \ ")
