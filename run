@@ -204,7 +204,7 @@ class crack:
 		elif(yt in ("t","T")):
 			self.menu()
 				
-	def menu(self):
+	def logo(self):
 		wok=[]
 		os.system('clear')
 		ha=0
@@ -232,6 +232,7 @@ class crack:
 		print('')
 		print('')
 		
+	def menu():
 		os.system("clear")               
 		print('')
 		print('')
@@ -252,7 +253,7 @@ class crack:
 				if(jumlah>=11):
 					print("\n[!] Target terlalu banyak maximal target 10")
 					time.sleep(2)
-					self.banner()
+					self.menu()
 				else:pass
 			except:jumlah=1
 			print("\nKetik 'me' Buat Crack Daftar Teman Akun Anda")
