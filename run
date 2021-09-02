@@ -208,7 +208,17 @@ class crack:
 		wok=[]
 		os.system('clear')
 		ha=0
-		self.jalan(f"
+self.jalan(f"\033[1;37m                    ______---_____ \n")
+self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
+self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
+self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
+self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
+self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
+self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
+self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
+self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
+.jalan(f"[!] Welcomselfe {self.nama} Selamat Menggunakan\n")
+
 \033[1;37m                    ______---_____ 
 \033[1;37m         ___-----           __      ----_ 
 \033[1;37m ___---             ___------             \ 
