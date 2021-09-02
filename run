@@ -231,7 +231,7 @@ class crack:
 		self.jalan("\033[1;36m¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\033[1;37m\_____________)")
 		print('')
 		print('')
-		time.sleep(1)
+		time.sleep(0.07)
 		
 		os.system("clear")               
 		print('')
