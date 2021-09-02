@@ -136,8 +136,8 @@ class crack:
 				break
 				
 	def kirim(self):
-		self.jalan(f"\n[=] Total Semua ID: {str(len(id))}")
-		pil=input("[?] Pwlist Manual [Y/T]: ")
+		self.jalan(f"\n\033[1;36m[\033[1;37m=\033[1;36m] \033[1;37mTotal semua ID:\033[1;33m {str(len(id))}")
+		pil=input("\033[1;36m[\033[1;37m?\033[1;36m] \033[1;37mPaswordlist manual y/t :\033[1;33m ")
 		if(pil in ("y","Y")):
 			with Bool(max_workers=35) as kirim:
 				print("[!] Contoh (sayang,name,name123)")
