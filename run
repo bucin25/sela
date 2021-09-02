@@ -231,7 +231,6 @@ class crack:
 		self.jalan("\033[1;36m¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\033[1;37m\_____________)")
 		print('')
 		print('')
-		banner()
 		
 	def banner():                
 		print('')
