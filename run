@@ -211,12 +211,18 @@ class crack:
 self.jalan(f"\033[1;37m                    ______---_____ \n")
 self.jalan(f"\033[1;37m         ___-----           __      ----\n")
 self.jalan(f"\033[1;37m ___---             ___------             \\n")
+self.jalan(f"\033[1;37m     ---______        ----                 \ \n")
+self.jalan(f"\033[1;37m                 --__    |             _____)\n")
+self.jalan(f"\033[1;37m                     -                /     \ \n")
+self.jalan(f"\033[1;37m          _____-----    ___--          \    /)\\n")
+self.jalan(f"\033[1;37m    -----_____      ---____            \__/  / \n")
 self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
 self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
 self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
 self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
 self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
-self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
+
+
 
 \033[1;37m                    ______---_____ 
 \033[1;37m         ___-----           __      ----_ 
@@ -226,8 +232,8 @@ self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
 \033[1;37m                     -                /     \ 
 \033[1;37m          _____-----    ___--          \    /)\ 
 \033[1;37m    -----_____      ---____            \__/  / 
-\033[1;37m                 --__    \ --    _          /\ 
-\033[1;37m                      --__-__     \_____/   \_/\ 
+\033[1;37m                 --__    \ --    _          /\ \033[1;
+37m                      --__-__     \_____/   \_/\ 
 \033[1;37m                            ----|   /          | 
 \033[1;36mAuthor \033[1;37m : JESSICA PUTRY         |  |___________| 
 \033[1;36mGelar  \033[1;37m : RATU ERROR            |  | ((_(_)| )_)
