@@ -203,12 +203,7 @@ class crack:
 			self.menu()
 		elif(yt in ("t","T")):
 			self.menu()
-			
-	def jalan(z):
-		sys.stdout.write(e)
-		sys.stdout.flush()
-		time.sleep(0.01)
-		
+				
 	def menu(self):
 		wok=[]
 		os.system('clear')
