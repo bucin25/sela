@@ -209,7 +209,7 @@ class crack:
 		os.system('clear')
 		ha=0
 		time.sleep(0.01)
-	def logo(self):	
+			
 		print('')
 		print('')
 		time.sleep(0.01)
