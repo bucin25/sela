@@ -232,7 +232,7 @@ class crack:
 		print('')
 		print('')
 		
-	def banner():                
+		os.system("clear")               
 		print('')
 		print('')
 		print('')
