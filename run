@@ -207,15 +207,24 @@ class crack:
 		wok=[]
 		os.system('clear')
 		ha=0
-		print("""
-  _________   _____ __________.___
- /   _____/  /  _  \\______    \   | 
- \_____  \  /  /_\  \|     ___/   |     
- /        \/    |    \    |   |   |   
-/_______  /\____|__  /____|   |___|
-        \/         \/
-        Latif. H & Yanwar. E
-        """)
+		print
+ 		jalan ('\033[1;37m                    ______---_____ ')
+  		jalan ('\033[1;37m         ___-----           __      ----_ ')
+		jalan ('\033[1;37m ___---             ___------             \ ')
+		jalan ('\033[1;37m     ---______        ----                 \ ')
+		jalan ('\033[1;37m                 --__    |             _____) ')
+		jalan ('\033[1;37m                     -                /     \ ')
+		jalan ('\033[1;37m          _____-----    ___--          \    /)\ ')
+		jalan ('\033[1;37m    -----_____      ---____            \__/  / ')
+		jalan ('\033[1;37m                 --__    \ --    _          /\ ')
+		jalan ('\033[1;37m                      --__-__     \_____/   \_/\ ')
+		jalan ('\033[1;37m                            ----|   /          | ')
+		jalan ('\033[1;36mAuthor \033[1;37m : JESSICA PUTRY         |  |___________| ')
+		jalan ('\033[1;36mGelar  \033[1;37m : RATU ERROR            |  | ((_(_)| )_) ')
+		jalan ('\033[1;36mJabatan\033[1;37m : \33[3;1m\033[1;37mOwner group \033[1;33mR.E...... \33[0;1m\033[1;37m|  \_((_(_)|/(_) ')
+		jalan ('\033[1;36m¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\033[1;37m\             ( ')
+		jalan ('\033[1;36m¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\033[1;37m\_____________)')
+		print
 		self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
 		print('[1]. Crack Daftar Teman/Publik\n[2]. Crack Daftar Followers\n[C]. Cek Hasil Crack\n[S]. Setting Useragent\n[L]. Logout Script\n[R]. Laporkan Bug Or Error')
 		print(f'+'+'-'*45+'+\n')
