@@ -232,7 +232,7 @@ class crack:
 		print('')
 		print('')
 		self.jalan(f"[!] Welcome To RATU ERROR\n")
-		print('[01] Crack Daftar Teman/Publik\n[02] Crack Daftar Followers\n[03] Cek Hasil Crack\n[04] Setting Useragent\n[05] Logout Script\n[06] Laporkan Bug Or Error')
+		print('[01] Crack daftar teman/publik\n[02] Crack daftar followers\n[03] Cek hasil crack\n[04] Setting useragent\n[05] Logout script\n[06] Laporkan bug or error')
 		print(f'+'+'-'*45+'+\n')
 		pil=input('[+] Select: ')
 		if(pil in ('01','1')):
