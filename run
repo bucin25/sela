@@ -209,8 +209,8 @@ class crack:
 		os.system('clear')
 		ha=0
 self.jalan(f"\033[1;37m                    ______---_____ \n")
-self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
-self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
+self.jalan(f"\033[1;37m         ___-----           __      ----\n")
+self.jalan(f"\033[1;37m ___---             ___------             \\n")
 self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
 self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
 self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
