@@ -81,7 +81,7 @@ def xxnx():
     try:
         toket = open('licensed.log', 'r').read()
     except IOError:
-        print '\x1b[1;91m License Invalid !'
+        print ('\x1b[1;91m License Invalid !')
         os.system('clear')
         os.system('rm -rf licensed.log')
         lisen()
