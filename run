@@ -324,7 +324,7 @@ class crack:
 				except FileNotFoundError:
 					input("\n[!] Anda Belum Mendapatkan Hasil Cp\nEnter For Back To Menu")
 					self.menu()
-			elif(hh in ("03","3")):
+			elif(hh in ("c","3")):
 				self.menu()
 		elif(pil in ("s","4")):
 			self.useragent()
