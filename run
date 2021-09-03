@@ -91,17 +91,6 @@ def xxnx():
     else:
         lisen()
 	
-def buat_folder():
-	try:os.mkdir("CP")
-	except:pass
-	try:os.mkdir("OK")
-	except:pass
-
-def jalan(z):
-    for e in z + '\n':
-        sys.stdout.write(e)
-        sys.stdout.flush()
-        time.sleep(0.03)
 		
 def logo():
 	time.sleep (0.01)
@@ -405,7 +394,64 @@ class crack:
 			print("\n[√] Menuju WhatsApp Author....\n[!] Klik Buka Dengan WhatsApp")
 			os.system("xdg-open https://wa.me/62895341157823")
 
-			
+def tik():
+    titik = [
+     '.   ', '..  ', '... ']
+    for o in titik:
+        print '\r\x1b[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Memeriksa Lisensi ' + o,
+        sys.stdout.flush()
+        time.sleep(1)
+        
+def lisen():
+    os.system('clear')
+    logo()
+    jalan('\n\x1b[1;97m [*] Mohon tunggu ...');time.sleep(1.0)
+    id = uuid.uuid4().hex[:25]
+    idg = open('licensed.log', 'w')
+    idg.write(id)
+    idg.close()
+    jalan ('\n\033[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Lisensi : \x1b[96m' + id)
+    time.sleep(0.07)
+    jalan ('\x1b[1;91m [*] Lisensi Belum Di konfirmasi\x1b[1;39m')
+    time.sleep(0.07)
+    jalan ('\033[1;96m [\033[1;97m*\033[1;96m] \033[1;97mChat Admin Untuk Mengkonfirmasi Lisensi\x1b[1;39m')
+    time.sleep(0.07)
+    raw_input('\n\x1b[1;97m [*] Tekan Enter ')
+    os.system('am start https://wa.me/+62895341157823?text=Hi+Ratu+Beli+Lisensi+dong.%20Lisensi:%20' + id + ' >/dev/null') 
+    time.sleep(1)
+    os.sys.exit()
+def user1():
+    try:
+        j = open('licensed.log', 'r').read()
+        r = requests.get('https://github.com/bucin25/License/blob/main/id').text.strip() # Jangan Di ganti bro'i nanti error
+        if j in r:
+            os.system('clear')
+            logo()
+            tik()
+            jalan('\n\033[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Lisensi \033[1;92mTersedia ✓')
+            time.sleep(1)
+            pilihlogin()
+        else:
+            os.system('clear')
+            logo()
+            tik()
+            jalan ('\n\x1b[1;91m [*] Lisensi Tidak Tersedia !')
+            time.sleep(1)
+            lisen()
+            jalan ('\033[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Chat Admin Untuk Mengkonfirmasi Lisensi\x1b[1;39m')
+            time.sleep(0.07)
+            raw_input('\n\x1b[1;97m [*] Tekan Enter ')
+            os.system('am start https://wa.me/+62895341157823?text=Hi+Ratu+Beli+Lisensi+dong.%20Lisensi:%20' + j + ' >/dev/null')
+            os.sys.exit()
+    except requests.exceptions.ConnectionError:
+    	os.system('clear')
+        print '\x1b[1;91m [!] Tidak Ada Koneksi Data\x1b[0;97m'
+        os.sys.exit()
+    except KeyboardInterrupt:
+        os.sys.exit()
+    except IOError:
+        subprocess.Popen(['rm', '-rf', 'licensed.log'])
+        romz()		
 			
 			
 if __name__=="__main__":
