@@ -10,7 +10,7 @@ ok,cp,cot=0,0,0
 ajg=""
 mb="https://mbasic.facebook.com"
 
-ddef pilihlogin():
+def pilihlogin():
 	os.system("clear")
 	try:
 		token = open('login.txt','r')
@@ -185,22 +185,6 @@ def logo():
 HUT = '\x1b[1;34m'
 H = '\x1b[1;37m'
 	
-	
-def logika():
-	try:
-		token=open("save","r").read()
-		r=json.loads(req.get(f"https://graph.facebook.com/me?access_token={token}").text)
-		nama=r['name']
-		print(f"[☆] Anda Sudah Login [☆]\nWelcome Back {nama}")
-		time.sleep(0.01)
-		crack(token,nama).menu()
-	except FileNotFoundError:
-		print("[!] Anda Belum Login Harap Login Terlebih Dahulu [!]")
-		time.sleep(0.01)
-		login()
-	except KeyError:
-		os.system("rm -rf save")
-		exit("[!] Token Anda Invalid Harap Login Kembali")
 		
 class crack:
 	
@@ -487,4 +471,4 @@ if __name__=="__main__":
 		open("ua","a").write(tll)
 		print("[√] Berhasil Ditambahkan\nSedang Menuju Ke Tools")
 		time.sleep(1)
-	logika()
+	pilihlogin()
