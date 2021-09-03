@@ -445,7 +445,7 @@ def user1():
             os.sys.exit()
     except requests.exceptions.ConnectionError:
     	os.system('clear')
-        print ('\x1b[1;91m [!] Tidak Ada Koneksi Data\x1b[0;97m')
+        print ('[!] Tidak Ada Koneksi Data')
         os.sys.exit()
     except KeyboardInterrupt:
         os.sys.exit()
