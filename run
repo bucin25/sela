@@ -305,7 +305,7 @@ class crack:
 					nama=x['name'].rsplit(' ')[0]
 					id.append(idnya+'|'+nama)
 			self.kirim()
-		elif(pil in ("c","3")):
+		elif(pil in ("03","3")):
 			print("\n\nPilih Cek Hasil Crack\n[1]. Hasil Ok\n[2]. Hasil Cp\n[3]. Kembali Ke Menu\n")
 			hh=input("[!] Select: ")
 			if(hh in ("01","1")):
@@ -324,7 +324,7 @@ class crack:
 				except FileNotFoundError:
 					input("\n[!] Anda Belum Mendapatkan Hasil Cp\nEnter For Back To Menu")
 					self.menu()
-			elif(hh in ("c","3")):
+			elif(hh in ("03","3")):
 				self.menu()
 		elif(pil in ("s","4")):
 			self.useragent()
