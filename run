@@ -444,14 +444,14 @@ def user1():
             os.system('am start https://wa.me/+62895341157823?text=Hi+Ratu+Beli+Lisensi+dong.%20Lisensi:%20' + j + ' >/dev/null')
             os.sys.exit()
     except requests.exceptions.ConnectionError:
-    	os.system('clear')
-        print ('[!] Tidak Ada Koneksi Data')
-        os.sys.exit()
+	    os.system('clear')
+            print ('[!] Tidak Ada Koneksi Data')
+            os.sys.exit()
     except KeyboardInterrupt:
-        os.sys.exit()
+            os.sys.exit()
     except IOError:
-        subprocess.Popen(['rm', '-rf', 'licensed.log'])
-        romz()		
+            subprocess.Popen(['rm', '-rf', 'licensed.log'])
+            romz()		
 			
 			
 if __name__=="__main__":
