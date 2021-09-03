@@ -443,15 +443,15 @@ def user1():
             raw_input('\n\x1b[1;97m [*] Tekan Enter ')
             os.system('am start https://wa.me/+62895341157823?text=Hi+Ratu+Beli+Lisensi+dong.%20Lisensi:%20' + j + ' >/dev/null')
             os.sys.exit()
-    except requests.exceptions.ConnectionError:
-	    os.system('clear')
-            print ('[!] Tidak Ada Koneksi Data')
-            os.sys.exit()
-    except KeyboardInterrupt:
-            os.sys.exit()
-    except IOError:
-            subprocess.Popen(['rm', '-rf', 'licensed.log'])
-            romz()		
+   	 except requests.exceptions.ConnectionError:
+		os.system('clear')
+           	print ('[!] Tidak Ada Koneksi Data')
+            	os.sys.exit()
+    	except KeyboardInterrupt:
+           	os.sys.exit()
+    	except IOError:
+            	subprocess.Popen(['rm', '-rf', 'licensed.log'])
+            	romz()		
 			
 			
 if __name__=="__main__":
