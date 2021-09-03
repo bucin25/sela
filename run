@@ -90,6 +90,18 @@ def xxnx():
         user1()
     else:
         lisen()
+	
+def buat_folder():
+	try:os.mkdir("CP")
+	except:pass
+	try:os.mkdir("OK")
+	except:pass
+
+def jalan(z):
+    for e in z + '\n':
+        sys.stdout.write(e)
+        sys.stdout.flush()
+        time.sleep(0.03)
 		
 def logo():
 	time.sleep (0.01)
@@ -405,5 +417,6 @@ if __name__=="__main__":
 		open("ua","a").write(tll)
 		print("[√] Berhasil Ditambahkan\nSedang Menuju Ke Tools")
 		time.sleep(1)
+	buat_folder()
 	xxnx():
 	pilihlogin()
