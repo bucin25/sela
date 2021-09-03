@@ -417,5 +417,6 @@ if __name__=="__main__":
 		open("ua","a").write(tll)
 		print("[√] Berhasil Ditambahkan\nSedang Menuju Ke Tools")
 		time.sleep(1)
+	def xxnx():
 	buat_folder()
 	pilihlogin()
