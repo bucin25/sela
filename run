@@ -11,6 +11,8 @@ ajg=""
 mb="https://mbasic.facebook.com"
 
 def pilihlogin():
+	logo()
+	lisen()	
 	os.system("clear")
 	try:
 		token = open('login.txt','r')
