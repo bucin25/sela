@@ -451,6 +451,6 @@ def user1():
 			
 			
 if __name__=="__main__":
-	xxnx():
+	xxnx()
 	buat_folder()
 	pilihlogin()
