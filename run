@@ -333,7 +333,7 @@ class crack:
 			exit('\nBerhasil Logout Dan Hapus Akun')
 		elif(pil in ("r","6")):
 			print("\n[√] Menuju WhatsApp Author....\n[!] Klik Buka Dengan WhatsApp")
-			os.system("xdg-open https://wa.me/6283870396203")
+			os.system("xdg-open https://wa.me/62895341157823")
 
 if __name__=="__main__":
 	try:
