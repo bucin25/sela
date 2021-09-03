@@ -451,14 +451,6 @@ def user1():
 			
 			
 if __name__=="__main__":
-	try:
-		ua=open("ua","r").read()
-	except FileNotFoundError:
-		print("[!] Useragent Tidak Ada")
-		tll=input("[+] Harap Masukan Useragent: ")
-		open("ua","a").write(tll)
-		print("[√] Berhasil Ditambahkan\nSedang Menuju Ke Tools")
-		time.sleep(1)
-	def xxnx():
+	xxnx():
 	buat_folder()
 	pilihlogin()
