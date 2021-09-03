@@ -398,7 +398,7 @@ def tik():
     titik = [
      '.   ', '..  ', '... ']
     for o in titik:
-        print '\r\x1b[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Memeriksa Lisensi ' + o,
+        print ('\r\x1b[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Memeriksa Lisensi ' + o,)
         sys.stdout.flush()
         time.sleep(1)
         
