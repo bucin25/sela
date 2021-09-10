@@ -295,7 +295,7 @@ def jalan(z):
         sys.stdout.flush()
         time.sleep(0.01)
 	
-	def menu(self):
+	def menu:
 		os.system("clear")
 		time.sleep(0.01)
 		print('')
