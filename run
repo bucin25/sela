@@ -230,6 +230,7 @@ class crack:
 def logo():
 	wok=[]
 	os.system('clear')
+	ha=0
 	print('')
 	print('')
 	time.sleep(1)
@@ -342,8 +343,8 @@ def menu():
 			except:jumlah=1
 			print("\nKetik 'me' Buat Crack Daftar Teman Akun Anda")
 			for j in range(jumlah):
-				ha+=1
-				target=input(f"[+] Masukan ID Target Ke {ha}: ").replace("'me'","me")
+				ba+=1
+				target=input(f"[+] Masukan ID Target Ke {ba}: ").replace("'me'","me")
 				try:
 					rr=json.loads(req.get(f'https://graph.facebook.com/{target}?access_token={self.token}').text)
 					print(f"[=] Nama Target\t: {rr['name']}")
