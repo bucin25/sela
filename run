@@ -273,7 +273,7 @@ class crack:
 		self.jalan(f" \033[1;96m  ____________________________________________")
 		self.jalan(f"\033[1;97m\033[1;96m ¤\033[1;97m[][][][][][][][][][][][][][][][][][][][][][][]\033[1;96m¤\n")
 		print("")
-		print('\033[1;36m[\033[1;37m01\033[1;36m] \033[1;37mCrack daftar teman\033[1;36m/\033[1;37mpublik\n\033[1;36m[\033[1;37m02\033[1;36m] \033[1;37mCrack daftar followers\n\033[1;36m[\033[1;37m03\033[1;36m] \033[1;37mCek hasil crack\n\033[1;36m[\033[1;37m04\033[1;36m] \033[1;37mSetting useragent\n\033[1;36m[\033[1;37m05\033[1;36m] \033[1;37mLog out script\n\033[1;36m[\033[1;37m06\033[1;36m] \033[1;37mLaporkan masalah')
+		print('\033[1;36m[\033[1;37m01\033[1;36m] \033[1;37mCRACK DAFTAR TEMAN\033[1;36m/\033[1;37mPUBLIK\n\033[1;36m[\033[1;37m02\033[1;36m] \033[1;37mCRACK DAFTARA FOLLOWERS\n\033[1;36m[\033[1;37m03\033[1;36m] \033[1;37mCEK HASIL CRACK\n\033[1;36m[\033[1;37m04\033[1;36m] \033[1;37mSETTING USERAGENT\n\033[1;36m[\033[1;37m05\033[1;36m] \033[1;37mLOG OUT SCRIPT \033[1;3\n\033[1;36m[\033[1;37m06\033[1;36m] \033[1;37mWHATSAPP ADMIN')
 		print("")
 		pil=input('\033[1;36m[\033[1;37m?\033[1;36m] \033[1;37mPILIH :\033[1;33m ')
 		if(pil in ('01','1')):
