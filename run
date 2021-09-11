@@ -253,12 +253,19 @@ class crack:
 		self.jalan(f"\033[1;36m¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\033[1;37m\_____________)")
 		print('')
 		time.sleep(0.07)
-	
+		
+	def self.jalan(z):
+	for e in z + '\n':
+		sys.stdout.write(e)
+		sys.stdout.flush()
+		time.sleep(0.01)
+		
 	def menu(self):
 		wok=[]
 		os.system('clear')
 		ha=0
 		self.jalan(f"\n")
+		self.jalan(f"")
 		self.jalan(f"")
 		self.jalan(f"                \33[3;1m\033[1;97mW e l c o m e  T o\33[0;1m\n")
 		self.jalan(f"       \033[1;96m[\33[37;1mR\033[1;96m] \033[1;96m[\033[1;97mA\033[1;96m] \033[1;96m[\033[1;97mT\033[1;96m] \033[1;96m[\033[1;97mU\033[1;96m]  \033[1;96m[\033[1;97mE\033[1;96m] \033[1;96m[\033[1;97mR\033[1;96m] \033[1;96m[\33[37;1mR\033[1;96m] \033[1;96m[\033[1;97mO\033[1;96m] \033[1;96m[\033[1;97mR\033[1;96m]\033[1;96m\n")
