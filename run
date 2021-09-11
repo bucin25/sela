@@ -204,7 +204,7 @@ class crack:
 				for email in id:
 					uid,name=email.split("|")
 					if(len(str(name.lower()))>=2):
-						pw=[name.lower()+'123'name.lower()+'12345']
+						pw=[name.lower()+'123,name.lower()+'12345']
 					elif(len(str(name.lower()))<=2):
 						pw=[name.lower()+'123',name.lower()+'12345']
 					elif(len(str(name.lower()))<=3):
