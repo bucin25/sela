@@ -227,6 +227,11 @@ class crack:
 			self.menu()
 		elif(yt in ("t","T")):
 			self.menu()
+	
+	def jalan():
+		sys.stdout.write(e)
+		sys.stdout.flush()
+		time.sleep(0.01)
 		
 	def logo(self):
 		wok=[]
@@ -253,11 +258,6 @@ class crack:
 		self.jalan(f"\033[1;36m¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\033[1;37m\_____________)")
 		print('')
 		time.sleep(0.07)
-		
-	def jalan():
-		sys.stdout.write(e)
-		sys.stdout.flush()
-		time.sleep(0.01)
 		
 	def menu(self):
 		wok=[]
