@@ -233,7 +233,7 @@ class crack:
 		os.system('clear')
 		sys.stdout.write
 		sys.stdout.flush
-		time.sleep(0.01)
+		time.sleep(0.001)
 		ha=0
 		print('')
 		print('')
@@ -262,7 +262,7 @@ class crack:
 		os.system('clear')
 		sys.stdout.write
 		sys.stdout.flush
-		time.sleep(0.01)
+		time.sleep(0.001)
 		ha=0
 		print("")
 		print("")
