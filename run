@@ -341,7 +341,7 @@ def menu():
 			self.menu()
 		else:pass
 	except:jumlah=1
-			print("\nKetik 'me' Buat Crack Daftar Teman Akun Anda")
+	print("\nKetik 'me' Buat Crack Daftar Teman Akun Anda")
 	for j in range(jumlah):
 			ha+=1
 			target=input(f"[+] Masukan ID Target Ke {ha}: ").replace("'me'","me")
