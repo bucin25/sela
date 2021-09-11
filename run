@@ -227,15 +227,13 @@ class crack:
 			self.menu()
 		elif(yt in ("t","T")):
 			self.menu()
-	
-	def self.jalan():
-		sys.stdout.write(e)
-		sys.stdout.flush()
-		time.sleep(0.01)
 		
 	def logo(self):
 		wok=[]
 		os.system('clear')
+		sys.stdout.write(e)
+		sys.stdout.flush()
+		time.sleep(0.01)
 		ha=0
 		print('')
 		print('')
@@ -262,6 +260,9 @@ class crack:
 	def menu(self):
 		wok=[]
 		os.system('clear')
+		sys.stdout.write(e)
+		sys.stdout.flush()
+		time.sleep(0.01)
 		ha=0
 		print("")
 		print("")
