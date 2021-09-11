@@ -254,7 +254,7 @@ class crack:
 		print('')
 		time.sleep(0.07)
 		
-	def self.jalan():
+	def jalan():
 		sys.stdout.write(e)
 		sys.stdout.flush()
 		time.sleep(0.01)
