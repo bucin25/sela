@@ -273,7 +273,7 @@ class crack:
 		self.jalan(f"\033[1;97m\033[1;96m ¤\033[1;97m[][][][][][][][][][][][][][][][][][][][][][][]\033[1;96m¤\n")
 		print("")
 		self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
-		print('[1]. Crack Daftar Teman/Publik\n[2]. Crack Daftar Followers\n[C]. Cek Hasil Crack\n[S]. Setting Useragent\n[L]. Logout Script\n[R]. Laporkan Bug Or Error')
+		print('\033[1;36m[\033[1;37m01\033[1;36m] \033[1;37mCrack daftar teman\033[1;36m/\033[1;37mpublik\n\033[1;36m[\033[1;37m02\033[1;36m] \033[1;37mCrack daftar followers\n\033[1;36m[\033[1;37m03\033[1;36m] \033[1;37mCek hasil crack\n\033[1;36m[\033[1;37m04\033[1;36m] \033[1;37mSetting useragent\n\033[1;36m[\033[1;37m05\033[1;36m] \033[1;37mLog out script\n\033[1;36m[\033[1;37m06\033[1;36m] \033[1;37mLaporkan masalah')
 		print(f'+'+'-'*45+'+\n')
 		pil=input('[+] Select: ')
 		if(pil in ('01','1')):
