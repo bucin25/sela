@@ -363,7 +363,7 @@ def menu():
 		nama=x['name'].rsplit(' ')[0]
 		id.append(idnya+'|'+nama)
 		self.kirim()
-			elif(pil in ('02','2')):
+elif(pil in ('02','2')):
 		print('\n\tCRACK DAFTAR FOLLOWERS')
 		try:
 			jumlah=int(input("\n[!] Target maximal 10 Target\n[?] Masukan Jumlah Target: "))
