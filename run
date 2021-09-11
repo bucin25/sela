@@ -94,7 +94,7 @@ class crack:
 	def crack(self,user,lala,asu):
 		global ok,cp,cot,ajg
 		ua=awokawok(["Mozilla/5.0 (SymbianOS/9.3; Series60/3.2 NokiaE5-00/071.003; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/533.4 (KHTML, like Gecko) NokiaBrowser/7.3.1.26 Mobile Safari/533.4 3gpp-gba",open("ua","r").read()])
-		print(f'[ CRACK ] {str(cot)}/{str(len(id))} | HASIL:OK/CP | {str(ok)}/{str(cp)}')
+		print('[ CRACK ] {str(cot)}/{str(len(id))} | HASIL:OK/CP | {str(ok)}/{str(cp)}')
 		if ajg!=user:
 			ajg=user
 			cot+=1
@@ -135,7 +135,7 @@ class crack:
 	def crack2(self,user,lala,asu):
 		global ok,cp,cot,ajg
 		ua=awokawok(["Mozilla/5.0 (SymbianOS/9.3; Series60/3.2 NokiaE5-00/071.003; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/533.4 (KHTML, like Gecko) NokiaBrowser/7.3.1.26 Mobile Safari/533.4 3gpp-gba",open("ua","r").read()])
-		print(f'[ CRACK ] {str(cot)}/{str(len(id))} | HASIL:OK/CP | {str(ok)}/{str(cp)}')
+		print('[ CRACK ] {str(cot)}/{str(len(id))} | HASIL:OK/CP | {str(ok)}/{str(cp)}')
 		if ajg!=user:
 			ajg=user
 			cot+=1
