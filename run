@@ -4,6 +4,26 @@ import requests as req,json,time,os,sys,re
 from concurrent.futures import ThreadPoolExecutor as Bool
 from bs4 import BeautifulSoup as parser
 from random import choice as awokawok,randint as kontol
+import os
+import sys
+import time
+import datetime
+import random
+import hashlib
+import re
+import threading
+import json
+import urllib
+import requests
+import uuid
+import ipaddress
+import calendar
+from multiprocessing.pool import ThreadPool
+from requests.exceptions import ConnectionError
+from bs4 import BeautifulSoup as par
+from time import sleep
+from datetime import datetime
+from datetime import date
 
 id=[]
 ok,cp,cot=0,0,0
@@ -211,15 +231,27 @@ class crack:
 		wok=[]
 		os.system('clear')
 		ha=0
-		print("""
-  _________   _____ __________.___
- /   _____/  /  _  \\______    \   | 
- \_____  \  /  /_\  \|     ___/   |     
- /        \/    |    \    |   |   |   
-/_______  /\____|__  /____|   |___|
-        \/         \/
-        Latif. H & Yanwar. E
-        """)
+		print('')
+		print('')
+		time.sleep(1)
+		jalan ("\033[1;37m                    ______---_____ ")
+		jalan ("\033[1;37m         ___-----           __      ---- ")
+		jalan ("\033[1;37m ___---             ___------             \ ")
+		jalan ("\033[1;37m     ---______        ----                 \ ")
+		jalan ("\033[1;37m                 --__    |             _____)")
+		jalan ("\033[1;37m                     -                /     \ ")
+		jalan ("\033[1;37m          _____-----    ___--         \    / )")
+		jalan ("\033[1;37m    -----_____      ---____            \__/  /")
+		jalan ("\033[1;37m                 --__    \ --    _          /\ ")
+		jalan ("\033[1;37m                      --__-__     \_____/   \_/\ ")
+		jalan ("\033[1;37m                            ----|   /          |")
+		jalan ("\033[1;36mAuthor \033[1;37m : JESSICA PUTRY         |  |___________|")
+		jalan ("\033[1;36mGelar  \033[1;37m : Ratu error            |  | ((_(_)| )_)")
+		jalan ("\033[1;36mGroup\033[1;37m   : \033[1;32mRatu error...         \33[0;1m\033[1;37m|  \_((_(_)|/(_)")
+		jalan ("\033[1;36m¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\033[1;37m\             (")
+		jalan ("\033[1;36m¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\033[1;37m\_____________)")
+		print('')
+		time.sleep(0.07)
 		self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
 		print('[1]. Crack Daftar Teman/Publik\n[2]. Crack Daftar Followers\n[C]. Cek Hasil Crack\n[S]. Setting Useragent\n[L]. Logout Script\n[R]. Laporkan Bug Or Error')
 		print(f'+'+'-'*45+'+\n')
