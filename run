@@ -340,7 +340,7 @@ def menu():
 			time.sleep(2)
 			self.menu()
 		else:pass
-		except:jumlah=1
+	except:jumlah=1
 		print("\nKetik 'me' Buat Crack Daftar Teman Akun Anda")
 	for j in range(jumlah):
 			ha+=1
