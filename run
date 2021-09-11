@@ -165,8 +165,7 @@ class crack:
 				pwList=input("[+] Masukan Password List: ").split(",")
 				print("\n[1] Crack Metode B-api\n[2] Crack Metode Mbasic [ RECOMENDED ]\n")
 				tip=input("[?] Select: ")
-				self.jalan(f'\n[√] Crack Berjalan Pukul: {time.strftime("%X")}')
-				print(f'+'+'-'*45+'+\n')
+				print(f'\n')
 				if(tip in ("02","2")):
 					for email in id:
 						uid,name=email.split("|")
