@@ -231,8 +231,8 @@ class crack:
 	def logo(self):
 		wok=[]
 		os.system('clear')
-		sys.stdout.write()
-		sys.stdout.flush()
+		sys.stdout.write
+		sys.stdout.flush
 		time.sleep(0.01)
 		ha=0
 		print('')
@@ -260,8 +260,8 @@ class crack:
 	def menu(self):
 		wok=[]
 		os.system('clear')
-		sys.stdout.write()
-		sys.stdout.flush()
+		sys.stdout.write
+		sys.stdout.flush
 		time.sleep(0.01)
 		ha=0
 		print("")
