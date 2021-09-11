@@ -157,7 +157,7 @@ class crack:
 				
 	def kirim(self):
 		self.jalan(f"\n\033[1;36m\033[1;36m[\033[1;37m=\033[1;36m] \033[1;37mTotal Semua ID           :\033[1;33m {str(len(id))}")
-		pil=input("\033[1;36m[\033[1;37m?\033[1;36m] \033[1;37mPaswordlist Manual [\033[1;32mY\033[1;37m/\033[1;35mT\033[1;37m] :\033[1;33m ")
+		pil=input("\033[1;36m[\033[1;37m?\033[1;36m] \033[1;37mPaswordlist Manual [\033[1;32mY\033[1;37m/\033[1;33mT\033[1;37m] :\033[1;33m ")
 		if(pil in ("y","Y")):
 			with Bool(max_workers=35) as kirim:
 				print("")
@@ -310,9 +310,9 @@ class crack:
 		elif(pil in ('02','2')):
 			print('\n\tCRACK DAFTAR FOLLOWERS')
 			try:
-				jumlah=int(input("\n[!] Target maximal 10 Target\n[?] Masukan Jumlah Target: "))
+				jumlah=int(input("\n\033[1;36m[\033[1;37m?\033[1;36m] \033[1;37mJumlah target ( max \033[1;36m10\033[1;37m ) :\033[1;33m "))
 				if(jumlah>=11):
-					print("\n[!] Target terlalu banyak maximal target 10")
+					print("    \033[1;37mTarget maximal \033[1;32m10\033[1;37m...!!!")
 					time.sleep(2)
 					self.menu()
 				else:pass
@@ -361,10 +361,10 @@ class crack:
 				self.menu()
 		elif(pil in ("04","4")):
 			self.useragent()
-		elif(pil in ('l','L')):
+		elif(pil in ('05','5')):
 			os.system('rm -rf save')
 			exit('\nBerhasil Logout Dan Hapus Akun')
-		elif(pil in ("r","R")):
+		elif(pil in ("06","6")):
 			print("\n[√] Menuju WhatsApp Author....\n[!] Klik Buka Dengan WhatsApp")
 			os.system("xdg-open https://wa.me/6283870396203")
 
