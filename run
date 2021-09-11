@@ -291,11 +291,11 @@ class crack:
 				target=input(f"\033[1;36m[\033[1;37m+\033[1;36m] \033[1;37mMasukan ID Target Ke \033[1;36m{ha} \033[1;37m:\033[1;33m ").replace("'me'","me")
 				try:
 					rr=json.loads(req.get(f'https://graph.facebook.com/{target}?access_token={self.token}').text)
-					print(f"\033[1;36m[\033[1;36m=\033[1;36m] \033[1;36mNama target\t       :\033[1;33m {rr['name']}")
+					print(f"\033[1;36m[\033[1;36m=\033[1;36m] \033[1;37mNama target\t           :\033[1;33m {rr['name']}")
 					ro=json.loads(req.get(f'https://graph.facebook.com/{target}/friends?access_token={self.token}').text)
 					for x in ro['data']:
 						wok.append(x['id'])
-					print(f"\033[1;36m[\033[1;37m=\033[1;36m] \033[1;37mJumlah ID\t          :\033[1;33m {len(wok)}")
+					print(f"\033[1;36m[\033[1;37m=\033[1;36m] \033[1;37mJumlah ID\t           :\033[1;33m {len(wok)}")
 					wok.clear()
 				except KeyError:
 					print("    \033[1;37mTarget tidak ada...!!!")
