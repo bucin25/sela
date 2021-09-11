@@ -234,7 +234,7 @@ class crack:
 		print('')
 		print('')
 		time.sleep(1)
-		self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
+		self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan")
 		self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
 		self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
 		self.jalan(f"[!] Welcome {self.nama} Selamat Menggunakan\n")
