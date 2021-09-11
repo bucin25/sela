@@ -160,6 +160,7 @@ class crack:
 		pil=input("[?] Pwlist Manual [Y/T]: ")
 		if(pil in ("y","Y")):
 			with Bool(max_workers=35) as kirim:
+				print("")
 				print("[!] Contoh (sayang,name,name123)")
 				pwList=input("[+] Masukan Password List: ").split(",")
 				print("\nPilih Metode Crack\n[1]. Crack Metode B-api\n[2]. Crack Metode Mbasic [ RECOMENDED ]\n")
