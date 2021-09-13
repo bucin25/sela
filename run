@@ -313,7 +313,6 @@ class crack:
 			except:jumlah=1
 			print("\n \033[1;37mKetik '\033[1;36mme\033[1;37m' untuk crack daftar teman akun anda\n")
 			for j in range(jumlah):
-				ha+=1
 				target=input(f" \033[1;36m[\033[1;37m+\033[1;36m] \033[1;37mMasukan ID target Ke \033[1;36m{ha} \033[1;37m:\033[1;33m ").replace("'me'","me")
 				try:
 					rr=json.loads(req.get(f'https://graph.facebook.com/{target}?access_token={self.token}').text)
