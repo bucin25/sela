@@ -94,7 +94,6 @@ class crack:
 	def crack(self,user,lala,asu):
 		global ok,cp,cot,ajg
 		ua=awokawok(["Mozilla/5.0 (SymbianOS/9.3; Series60/3.2 NokiaE5-00/071.003; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/533.4 (KHTML, like Gecko) NokiaBrowser/7.3.1.26 Mobile Safari/533.4 3gpp-gba",open("ua","r").read()])
-		print("")
 		print(f'\r \033[1;37mCRACK {str(cot)}/{len(id)} [\033[1;36mOK : {str(ok)}\033[1;37m] \033[1;36m[\033[1;37mCP : {str(cp)}\033[1;36m]',end='')
 		if ajg!=user:
 			ajg=user
@@ -198,7 +197,7 @@ class crack:
 			with Bool(max_workers=35) as kirim:
 				print("\n \033[1;36m[\033[1;37m1\033[1;36m] \033[1;37mCrack metode B-api\n \033[1;36m[\033[1;37m2\033[1;36m]\033[1;37m Crack metode mbasic\n")
 				tip=input(" \033[1;36m[\033[1;37m?\033[1;36m] \033[1;36mPilih \033[1;37m:\033[1;33m ")
-				print(f'')
+				print('')
 				for email in id:
 					uid,name=email.split("|")
 					if(len(str(name.lower()))>=2):
