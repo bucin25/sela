@@ -163,7 +163,7 @@ class crack:
 				pwList=input(" \033[1;36m[\033[1;37m+\033[1;36m] \033[1;37mMasukan password list    :\033[1;33m ").split(",")
 				print("\n \033[1;36m[\033[1;37m1\033[1;36m] \033[1;37mCrack metode B-api\n \033[1;36m[\033[1;37m2\033[1;36m]\033[1;37m Crack metode mbasic\n")
 				tip=input(" \033[1;36m[\033[1;37m?\033[1;36m] \033[1;36mPilih \033[1;37m:\033[1;33m ")
-				print(f'\n')
+				print(f'')
 				if(tip in ("02","2")):
 					for email in id:
 						uid,name=email.split("|")
