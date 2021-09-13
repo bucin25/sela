@@ -163,8 +163,8 @@ class crack:
 				print("")
 				print("\033[1;36m[!] Contoh (sayang,name,name123)")
 				pwList=input("[+] Masukan Password List: ").split(",")
-				print("\n[1] Crack Metode B-api\n[2] Crack Metode Mbasic [ RECOMENDED ]\n")
-				tip=input("[?] Select: ")
+				print("\n \033[1;36m[\033[1;37m1\033[1;36m] \033[1;37mCrack metode B-api\n \033[1;36m[\033[1;37m2\033[1;36m]\033[1;37m Crack metode mbasic\n")
+				tip=input(" \033[1;36m[\033[1;37m?\033[1;36m] \033[1;36mPilih \033[1;37m:\033[1;33m ")
 				print(f'\n')
 				if(tip in ("02","2")):
 					for email in id:
@@ -176,8 +176,8 @@ class crack:
 						kirim.submit(self.crack2,uid,pwList,name.lower())
 		elif(pil in ("t","T")):
 			with Bool(max_workers=35) as kirim:
-				print("\n\033[1;36m[\033[1;37m1\033[1;36m] \033[1;37mCrack metode B-api\n\033[1;36m[\033[1;37m2\033[1;36m]\033[1;37m Crack metode mbasic\n")
-				tip=input("\033[1;36m[\033[1;37m?\033[1;36m] \033[1;36mPilih \033[1;37m:\033[1;33m ")
+				print("\n \033[1;36m[\033[1;37m1\033[1;36m] \033[1;37mCrack metode B-api\n \033[1;36m[\033[1;37m2\033[1;36m]\033[1;37m Crack metode mbasic\n")
+				tip=input(" \033[1;36m[\033[1;37m?\033[1;36m] \033[1;36mPilih \033[1;37m:\033[1;33m ")
 				print(f'')
 				for email in id:
 					uid,name=email.split("|")
