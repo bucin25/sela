@@ -337,8 +337,7 @@ class crack:
 			hh=input(" \033[1;36m[\033[1;37m?\033[1;36m] \033[1;36mPilih :\033[1;33m ")
 			if(hh in ("01","1")):
 				try:
-					print ("\n [+] hasil \033[1;97[\033[1;96mOK\033[1;97]\033[1;97m tanggal : \033[1;96m%s-%s-%s\033[0;97m" % (ha, op, ta)) 
-					os.system("cat out/OK-%s-%s-%s.txt" % (ha, op, ta))
+					print("\n"+open("ok","r").read())
 					input("Enter For Back To Menu")
 					self.menu()
 				except FileNotFoundError:
@@ -346,8 +345,7 @@ class crack:
 					self.menu()
 			elif(hh in ("02","2")):
 				try:
-					print (" [+] hasil \033[1;96m[\033[1;97mCP\033[1;96m]\033[1;97m tanggal : \033[1;96m%s-%s-%s\033[0;97m" % (ha, op, ta)) 
-					os.system("cat out/CP-%s-%s-%s.txt" % (ha, op, ta))
+					print("\n"+open("cp","r").read())
 					input("Enter For Back To Menu")
 					self.menu()
 				except FileNotFoundError:
