@@ -333,8 +333,8 @@ class crack:
 					id.append(idnya+'|'+nama)
 			self.kirim()
 		elif(pil in ("03","3")):
-			print("\n\nPilih Cek Hasil Crack\n[1]. Hasil Ok\n[2]. Hasil Cp\n[3]. Kembali Ke Menu\n")
-			hh=input("[!] Select: ")
+			print("\n\n \033[1;36m[\033[1;3671\033[1;36m]\033[1;36m Hasil OK\n \033[1;36m[\033[1;37m2\033[1;36m]\033[1;37m Hasil CP\n \033[1;36m[\033[1;37m3\033[1;36m]\033[1;37m Kembali Ke menu\n")
+			hh=input(" \033[1;36m[\033[1;37!\033[1;36m] \033[1;36mPilih :\033[1;33 ")
 			if(hh in ("01","1")):
 				try:
 					print("\n"+open("ok","r").read())
