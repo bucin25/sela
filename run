@@ -341,7 +341,7 @@ class crack:
 					input("Enter For Back To Menu")
 					self.menu()
 				except FileNotFoundError:
-					input("\n[!] Anda Belum Mendapatkan Hasil Ok\nEnter For Back To Menu")
+					input("\n \033[1;36m[\033[1;37m!\033[1;36m] \033[1;37mAnda belum mendapatkan hasil \033[1;36mOK\nEnter For Back To Menu")
 					self.menu()
 			elif(hh in ("02","2")):
 				try:
@@ -349,7 +349,7 @@ class crack:
 					input("Enter For Back To Menu")
 					self.menu()
 				except FileNotFoundError:
-					input("\n[!] Anda Belum Mendapatkan Hasil Cp\nEnter For Back To Menu")
+					input("\n \033[1;36m[\033[1;37m!\033[1;36m] \033[1;37mAnda belum mendapatkan hasil \033[1;36mCP\nEnter For Back To Menu")
 					self.menu()
 			elif(hh in ("03","3")):
 				self.menu()
