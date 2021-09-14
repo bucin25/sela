@@ -300,7 +300,7 @@ class crack:
 				for x in r['data']:
 					idnya=x['id']
 					nama=x['name'].rsplit(' ')[0]
-					id.append(idnya+'|'+nama)
+					id.append(idnya+' ◊ '+nama)
 			self.kirim()
 		elif(pil in ('02','2')):
 			try:
