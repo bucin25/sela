@@ -214,7 +214,7 @@ class crack:
 		ua=open("ua","r").read()
 		print("\n \033[1;36mUSERAGENT saat ini \033[1;37m:",ua)
 		print("\n Ingin mengganti useragent....?")
-		yt=input(" \033[1;36m[\033[1;37m?\033[1;36m] \033[1;37mAnswer [\033[1;32mY\033[1;37m/\033[1;33mT\033[1;37m] : ")
+		yt=input(" \033[1;36m[\033[1;37m?\033[1;36m] \033[1;37mAnswer [\033[1;32mY\033[1;37m/\033[1;33mT\033[1;37m] :\033[1;33m ")
 		if(yt in ("y","Y")):
 			os.system("rm -rf ua")
 			uaBaru=input(" \033[1;36m[\033[1;37m+\033[1;36m] \033[1;37mMasukan useragent baru :\033[1;33m ")
