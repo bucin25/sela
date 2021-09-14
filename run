@@ -330,7 +330,7 @@ class crack:
 				for x in r['data']:
 					idnya=x['id']
 					nama=x['name'].rsplit(' ')[0]
-					id.append(idnya+'|'+nama)
+					id.append(idnya+' ◊ '+nama)
 			self.kirim()
 		elif(pil in ("03","3")):
 			print("\n\n \033[1;36m[\033[1;37m1\033[1;36m]\033[1;37m Hasil \033[1;36mOK\n \033[1;36m[\033[1;37m2\033[1;36m]\033[1;37m Hasil CP\n \033[1;36m[\033[1;37m3\033[1;36m]\033[1;37m Kembali Ke menu\n")
