@@ -333,7 +333,7 @@ class crack:
 					id.append(idnya+'|'+nama)
 			self.kirim()
 		elif(pil in ("03","3")):
-			print("\n\n \033[1;36m[\033[1;36m1\033[1;36m]\033[1;37m Hasil OK\n \033[1;36m[\033[1;37m2\033[1;36m]\033[1;37m Hasil CP\n \033[1;36m[\033[1;37m3\033[1;36m]\033[1;37m Kembali Ke menu\n")
+			print("\n\n \033[1;36m[\033[1;37m1\033[1;36m]\033[1;37m Hasil \033[1;36mOK\n \033[1;36m[\033[1;37m2\033[1;36m]\033[1;37m Hasil CP\n \033[1;36m[\033[1;37m3\033[1;36m]\033[1;37m Kembali Ke menu\n")
 			hh=input(" \033[1;36m[\033[1;37!\033[1;36m] \033[1;36mPilih :\033[1;33 ")
 			if(hh in ("01","1")):
 				try:
