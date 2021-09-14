@@ -35,7 +35,7 @@ def login():
 	print("""
 	 HARAP LOGIN UNTUK MELANJUTKAN KE SCRIPT
 	""")
-	print(" \033[1;36m[\033[1;37m1\033[1;36m]\033[1;37m Login dengan accesstoken facebook\n \033[1;36m[\033[1;36m2\033[1;36m]\033[1;37m Cara mendapatkan accesstoken\n")
+	print(" \033[1;36m[\033[1;37m1\033[1;36m]\033[1;37m Login dengan accesstoken facebook\n \033[1;36m[\033[1;37m2\033[1;36m]\033[1;37m Cara mendapatkan accesstoken\n")
 	pil=input(" \033[1;36m[\033[1;37m!\033[1;36m] \033[1;37mPilih metode login: ")
 	if(pil in ("01","1")):
 		to=input("[+] Masukan Access Token Anda: ")
