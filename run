@@ -57,7 +57,7 @@ def login():
 			time.sleep(2.5)
 			login()
 	elif(pil in ("2","02")):
-		print
+		print('')
 		to=input(" \033[1;36m[\033[1;37m+\033[1;36m] \033[1;37mMASUKAN ACCESS COOKIE :\033[1;36m ")
 		try:
 			data = requests.get('https://m.facebook.com/composer/ocelot/async_loader/?publisher=feed#_=_', headers = {
