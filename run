@@ -57,7 +57,6 @@ def login():
 			time.sleep(2.5)
 			login()
 	elif(pil in ("2","02")):
-		os.system('clear')
 		print
 		to=input(" \033[1;36m[\033[1;37m+\033[1;36m] \033[1;37mMASUKAN ACCESS COOKIE :\033[1;36m ")
 		try:
