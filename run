@@ -52,9 +52,8 @@ def login():
 			time.sleep(1.5)
 			crack(to,nama).menu()
 		except KeyError:
-			print(" \033[1;36m[\033[1;37m×\033[1;36m] \033[1;37mLogin gagal")
-			print("     \033[1;37mAccess token salah")
-			time.sleep(1.5)
+			print(" \033[1;31mLogin gagal")
+			time.sleep(2.5)
 			login()
 	elif(pil in ("2","02")):
 		os.system("xdg-open https://youtu.be/guj9s2aK3vM")
