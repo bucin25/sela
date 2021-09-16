@@ -77,12 +77,12 @@ def login():
 			})
 			find_token = re.search('(EAAA\w+)', data.text)
 			hasil    = " \033[0;97m[\033[0;91m!\033[0;97m] Your Cookie Invalid" if (find_token is None) else '\n* Your fb access token : ' + find_token.group(1)
-	except requests.exceptions.ConnectionError:
+		except requests.exceptions.ConnectionError:
 		print(' \033[0;97m[\033[0;91m!\033[0;97m] No Connection')
-	cookie = open("login.txt", 'w')
-	cookie.write(find_token.group(1))
-	cookie.close()
-	menu()
+		cookie = open("login.txt", 'w')
+		cookie.write(find_token.group(1))
+		cookie.close()
+		menu()
 	elif(pil in (" ","  ","   ","    ","     ")):
 		print("[!] Jangan kosong")
 		time.sleep(1)
