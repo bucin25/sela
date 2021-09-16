@@ -32,7 +32,6 @@ mb="https://mbasic.facebook.com"
 
 def login():
 	os.system("clear")
-	self.logo()
 	print(" \033[1;36m[\033[1;37m1\033[1;36m]\033[1;37m Login dengan access token facebook\n \033[1;36m[\033[1;37m2\033[1;36m]\033[1;37m Cara mendapatkan access token\n")
 	pil=input(" \033[1;36m[\033[1;37m!\033[1;36m] \033[1;36mPILIH :\033[1;33m ")
 	if(pil in ("01","1")):
@@ -222,34 +221,34 @@ class crack:
 		elif(yt in ("t","T")):
 			self.menu()
 		
-def logo(self):
-	wok=[]
-	os.system('clear')
-	sys.stdout.write
-	sys.stdout.flush
-	time.sleep(0.001)
-	ha=0
-	print('')
-	print('')
-	time.sleep(0.001)
-	self.jalan(f"                    ______---_____ ")
-	self.jalan(f"         ___-----           __      ---- ")
-	self.jalan(f" ___---             ___------             \ ")
-	self.jalan(f"     ---______        ----                 \ ")
-	self.jalan(f"                 --__    |             _____)")
-	self.jalan(f"                     -                /     \ ")
-	self.jalan(f"          _____-----    ___--         \    / )")
-	self.jalan(f"    -----_____      ---____            \__/  /")
-	self.jalan(f"                 --__    \ --    _          /\ ")
-	self.jalan(f"                      --__-__     \_____/   \_/\ ")
-	self.jalan(f"                            ----|   /          |")
-	self.jalan(f"\033[1;36mAuthor \033[1;37m : JESSICA PUTRY         |  |___________|")
-	self.jalan(f"\033[1;36mGelar  \033[1;37m : RATU ERROR            |  | ((_(_)| )_)")
-	self.jalan(f"\033[1;36mGroup\033[1;37m   : \033[1;32mRATU ERROR...         \33[0;1m\033[1;37m|  \_((_(_)|/(_)")
-	self.jalan(f"\033[1;36m¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\033[1;37m\             (")
-	self.jalan(f"\033[1;36m¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\033[1;37m\_____________)")
-	print('')
-	time.sleep(0.07)
+	def logo(self):
+		wok=[]
+		os.system('clear')
+		sys.stdout.write
+		sys.stdout.flush
+		time.sleep(0.001)
+		ha=0
+		print('')
+		print('')
+		time.sleep(0.001)
+		self.jalan(f"                    ______---_____ ")
+		self.jalan(f"         ___-----           __      ---- ")
+		self.jalan(f" ___---             ___------             \ ")
+		self.jalan(f"     ---______        ----                 \ ")
+		self.jalan(f"                 --__    |             _____)")
+		self.jalan(f"                     -                /     \ ")
+		self.jalan(f"          _____-----    ___--         \    / )")
+		self.jalan(f"    -----_____      ---____            \__/  /")
+		self.jalan(f"                 --__    \ --    _          /\ ")
+		self.jalan(f"                      --__-__     \_____/   \_/\ ")
+		self.jalan(f"                            ----|   /          |")
+		self.jalan(f"\033[1;36mAuthor \033[1;37m : JESSICA PUTRY         |  |___________|")
+		self.jalan(f"\033[1;36mGelar  \033[1;37m : RATU ERROR            |  | ((_(_)| )_)")
+		self.jalan(f"\033[1;36mGroup\033[1;37m   : \033[1;32mRATU ERROR...         \33[0;1m\033[1;37m|  \_((_(_)|/(_)")
+		self.jalan(f"\033[1;36m¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\033[1;37m\             (")
+		self.jalan(f"\033[1;36m¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\033[1;37m\_____________)")
+		print('')
+		time.sleep(0.07)
 		
 	def menu(self):
 		wok=[]
