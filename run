@@ -58,7 +58,7 @@ def login():
 			login()
 	elif(pil in ("2","02")):
 		os.system('clear')
-		self.menu('')
+		menu(\r)
 		print
 		cookie = raw_input(" \033[1;97m[\033[1;96m+[\033[1;97m] \033[1;96mMasukan Cookies \033[1;97m: ")
 		try:
