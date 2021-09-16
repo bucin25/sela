@@ -223,7 +223,7 @@ class crack:
 		elif(yt in ("t","T")):
 			self.menu()
 		
-	def logo(self):
+	def logo():
 		wok=[]
 		os.system('clear')
 		sys.stdout.write
