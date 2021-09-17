@@ -275,7 +275,7 @@ def user1():
             print ('\x1b[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Memeriksa Lisensi ' );time.sleep(2.0)
             jalan('\n\033[1;92m Lisensi Tersedia ✓')
             time.sleep(1)
-            menu()	
+            pilihlogin()	
         else:
             os.system('clear')
             logo()
@@ -407,5 +407,5 @@ def menu():
 		os.system("xdg-open https://wa.me/6283870396203")
 	
 if __name__=="__main__":
-	xxnx()
 	menu()
+	xxnx()
