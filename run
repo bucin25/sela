@@ -295,7 +295,7 @@ def user1():
             os.system('clear')
             logo()
             print ('\x1b[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Memeriksa Lisensi ' );time.sleep(2.0)
-            jalan ('\n\x1b[1;91m [*] Lisensi Tidak Tersedia !')
+            jalan ('\n\x1b[1;91m Lisensi Tidak Tersedia...!!!')
             time.sleep(1)
             lisen()
             jalan ('\033[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Chat Admin Untuk Mengkonfirmasi Lisensi\x1b[1;39m')
