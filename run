@@ -30,7 +30,7 @@ ok,cp,cot=0,0,0
 ajg=""
 mb="https://mbasic.facebook.com"
 
-def login():
+def piihlogin():
 	os.system("clear")
 	print('')
 	print(" \033[1;36m[\033[1;37m1\033[1;36m]\033[1;37m LOGIN DENGAN ACCESS TOKEN FACEBOOK\n \033[1;36m[\033[1;37m2\033[1;36m]\033[1;37m VIDEO CARA MENGAMBIL ACCESS TOKEN\n")
