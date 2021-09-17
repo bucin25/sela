@@ -424,4 +424,5 @@ def menu():
 		os.system("xdg-open https://wa.me/6283870396203")
 	
 if __name__=="__main__":
+	xxnx()
 	logika()
