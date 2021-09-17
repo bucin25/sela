@@ -52,7 +52,7 @@ def piihlogin():
 			print(f"[\033[1;37m☆\033[1;36m] \033[1;32mLogin Berhasil")
 			open("save","a").write(to)
 			time.sleep(2.5)
-			crack(to,nama).menu()
+			menu()
 		except KeyError:
 			print("     \033[1;31mLogin gagal")
 			time.sleep(2.5)
