@@ -274,8 +274,7 @@ def user1():
             logo()
             print ('\x1b[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Memeriksa Lisensi ' );time.sleep(2.0)
             jalan('\n\033[1;92m Lisensi Tersedia ✓')
-            time.sleep(1)
-            os.system('clear')	
+            time.sleep(1)	
         else:
             os.system('clear')
             logo()
@@ -408,4 +407,4 @@ def menu():
 	
 if __name__=="__main__":
 	xxnx()
-	menu()
+	pilihlogin()
