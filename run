@@ -275,7 +275,7 @@ def user1():
             print ('\x1b[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Memeriksa Lisensi ' );time.sleep(2.0)
             jalan('\n\033[1;92m Lisensi Tersedia ✓')
             time.sleep(1)
-            os.sys.exit()	
+            os.system('clear')	
         else:
             os.system('clear')
             logo()
