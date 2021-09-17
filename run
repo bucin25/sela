@@ -285,12 +285,12 @@ def user1():
         j = open('licensed.log', 'r').read()
         r = requests.get('https://github.com/bucin25/License/blob/main/id').text.strip() # Jangan Di ganti bro'i nanti error
         if j in r:
-            os.system('exit')
+            os.system('clear')
             logo()
             print ('\x1b[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Memeriksa Lisensi ' );time.sleep(2.0)
             jalan('\n\033[1;96m [\033[1;97m*\033[1;96m]\033[1;97m Lisensi \033[1;92mTersedia ✓')
             time.sleep(1)
-	    piihlogin()	
+            pilihlogin()	
         else:
             os.system('clear')
             logo()
